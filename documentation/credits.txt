@@ -1,0 +1,83 @@
+=========================================================
+FLORA DAILY - FLOWER & GIFT DELIVERY WEBSITE
+Credits
+=========================================================
+
+Project Name
+------------
+Flora Daily - Luxury Flower & Gift Delivery Website
+
+Project Type
+------------
+Responsive Front-End E-Commerce Website
+
+Developed By
+------------
+Kirishanth
+
+Project Description
+-------------------
+Flora Daily is a modern flower and gift delivery website developed using
+HTML5, CSS3, Bootstrap 5, and JavaScript. The website provides an elegant
+shopping experience with features like product browsing, wishlist,
+shopping cart, checkout, authentication pages, dashboard pages, and
+responsive design.
+
+Technologies Used
+-----------------
+• HTML5
+• CSS3
+• Bootstrap 5
+• JavaScript (ES6)
+• Bootstrap Icons
+• Google Fonts
+• Local Storage API
+
+Pages Included
+--------------
+• Home
+• About Us
+• Shop / Product Catalog
+• Product Details
+• Wishlist
+• Cart
+• Checkout
+• Blog
+• Blog Details
+• Occasions
+• Contact
+• Login
+• Register
+• Forgot Password
+• Order Details
+• Dashboard
+• Order History
+• Track Orders
+• Profile
+• Admin Dashboard
+• 404 Error Page
+• Coming Soon
+
+Resources
+---------
+Fonts:
+Google Fonts
+
+Icons:
+Bootstrap Icons
+
+Framework:
+Bootstrap 5
+
+Images
+------
+Images used in this project are intended for educational and demonstration
+purposes only. Replace them with properly licensed images before deploying
+the project commercially.
+
+Acknowledgements
+----------------
+Special thanks to Bootstrap and the open-source community for providing
+the tools and resources used during the development of this project.
+
+=========================================================

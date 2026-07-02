@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop | FloraDaily</title>
+
+    <meta name="description" content="Browse our premium flower collections and gift bundles for every occasion.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <link rel="stylesheet" href="../assets/css/dashboard-dark.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+
+            <div class="container">
+
+                <a class="navbar-brand" href="index.html">
+                    <span class="logo-text">FloraDaily</span>
+                </a>
+
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="index.html">Home One</a></li>
+                                <li><a class="dropdown-item" href="index-2.html">Home Two</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="catalog.html">Shop</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="occasions.html">Occasions</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-3">
+
+                        <!-- Dark Mode -->
+
+                        <button id="themeToggle" class="btn btn-light rounded-circle" aria-label="Dark Mode">
+
+                            <i class="fa-solid fa-moon"></i>
+
+                        </button>
+
+                        <!-- RTL -->
+
+                        <button id="rtlToggle" class="btn btn-light rounded-circle" aria-label="Toggle RTL">
+
+                            <i class="fa-solid fa-globe"></i>
+
+                        </button>
+
+                        <!-- Cart -->
+
+                        <a href="cart.html" class="btn btn-light rounded-circle position-relative" aria-label="Cart">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                            <span id="headerCartCount" class="badge rounded-pill bg-primary position-absolute top-0 start-100 translate-middle" style="font-size:0.65rem;">0</span>
+
+                        </a>
+
+                        <div id="authContainer" class="d-flex align-items-center gap-3">
+
+
+                            <a href="login.html" class="btn btn-outline-primary auth-btn">
+
+                                Login
+
+                            </a>
+
+                            <a href="register.html" class="btn btn-primary auth-btn">
+
+                                Sign Up
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+    <main>
+
+        <!--=====================================
+            ORDER DETAILS HERO
+======================================-->
+
+        <section class="order-details-hero py-5">
+
+            <div class="container">
+
+                <div class="order-details-banner">
+
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-6">
+
+                            <span class="dashboard-badge">
+
+                                <i class="fa-solid fa-receipt me-2"></i>
+
+                                Order Details
+
+                            </span>
+
+                            <h1>
+
+                                Order Information
+
+                            </h1>
+
+                            <p>
+
+                                Review every detail of your flower order, including delivery information, payment
+                                method, and purchased items.
+
+                            </p>
+
+                        </div>
+
+                        <div class="col-lg-6 text-end">
+
+                            <img src="../assets/images/order-details-banner.webp"
+                                class="img-fluid order-details-banner-image" alt="Order Details">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="py-5">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <!-- Left Side -->
+
+                    <div class="col-lg-8">
+
+                        <div class="order-info-card">
+
+                            <h3>
+
+                                Order Summary
+
+                            </h3>
+
+                            <div id="orderSummary">
+
+                                <!-- JS -->
+
+                            </div>
+
+                        </div>
+
+                        <div class="order-info-card mt-4">
+
+                            <h3>
+
+                                Ordered Products
+
+                            </h3>
+
+                            <div id="orderedProducts">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Right Side -->
+
+                    <div class="col-lg-4">
+
+                        <div class="order-info-card">
+
+                            <h3>
+
+                                Customer Details
+
+                            </h3>
+
+                            <div id="customerInfo">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!--=====================================
+            ACTION BUTTONS
+======================================-->
+
+    <section class="pb-5">
+
+        <div class="container">
+
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+                <a href="dash-orders.html" class="btn btn-outline-primary back-orders-btn">
+
+                    <i class="fa-solid fa-arrow-left me-2"></i>
+
+                    Back to My Orders
+
+                </a>
+
+                <a href="#" class="btn btn-primary rounded-pill" id="trackOrderBtn">
+
+                    <i class="fa-solid fa-location-crosshairs me-2"></i>
+
+                    Track Order
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer py-5">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+
+                    <h3 class="logo-text">FloraDaily</h3>
+
+                    <p>
+
+                        Fresh flowers and thoughtful gifts delivered with love
+                        for every special occasion.
+
+                    </p>
+
+                </div>
+
+                <div class="col-lg-2">
+
+                    <h5>Quick Links</h5>
+
+                    <ul class="list-unstyled">
+
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="catalog.html">Shop</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-3">
+
+                    <h5>Services</h5>
+
+                    <ul class="list-unstyled">
+
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="same-day-delivery.html">Same-Day Delivery</a></li>
+                        <li><a href="occasions.html">Occasions</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-3">
+
+                    <h5>Contact</h5>
+
+                    <p><i class="fa-solid fa-phone"></i> +1 234 567 890</p>
+
+                    <p><i class="fa-solid fa-envelope"></i> support@floradaily.com</p>
+
+                    <div class="d-flex gap-3 mt-3">
+
+                        <a href="404.html">
+
+                            <i class="fab fa-facebook-f"></i>
+
+                        </a>
+
+                        <a href="404.html">
+
+                            <i class="fab fa-instagram"></i>
+
+                        </a>
+
+                        <a href="404.html">
+
+                            <i class="fab fa-x-twitter"></i>
+
+                        </a>
+
+                        <a href="404.html">
+
+                            <i class="fab fa-whatsapp"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="text-center">
+
+                <p class="mb-0">
+
+                    &copy; 2026 FloraDaily. All Rights Reserved.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Main JS -->
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+
+</body>
+
+</html>

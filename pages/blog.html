@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog | FloraDaily</title>
+
+    <meta name="description"
+        content="Read the latest floral tips, gifting ideas and flower care guides from FloraDaily.">
+
+    <link rel="icon" href="../assets/images/favicon.webp">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+
+            <div class="container">
+
+                <!-- Logo -->
+
+                <a class="navbar-brand" href="index.html">
+                    <span class="logo-text">FloraDaily</span>
+                </a>
+
+                <!-- Mobile Toggle -->
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <!-- Navbar -->
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="index.html">Home One</a></li>
+                                <li><a class="dropdown-item" href="index-2.html">Home Two</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">
+                                About
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="catalog.html">
+                                Shop
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">
+                                Services
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="occasions.html">
+                                Occasions
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">
+                                Pricing
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <!-- Right Side -->
+
+                    <div class="d-flex align-items-center gap-3">
+
+                        <!-- Dark Mode -->
+
+                        <button id="themeToggle" class="btn btn-light rounded-circle" aria-label="Dark Mode">
+
+                            <i class="fa-solid fa-moon"></i>
+
+                        </button>
+
+                        <!-- RTL -->
+
+                        <button id="rtlToggle" class="btn btn-light rounded-circle" aria-label="Toggle RTL">
+
+                            <i class="fa-solid fa-globe"></i>
+
+                        </button>
+
+                        <!-- Cart -->
+
+                        <a href="cart.html" class="btn btn-light rounded-circle position-relative" aria-label="Cart">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                            <span id="headerCartCount" class="badge rounded-pill bg-primary position-absolute top-0 start-100 translate-middle" style="font-size:0.65rem;">0</span>
+
+                        </a>
+
+                        <!-- Authentication buttons -->
+
+                        <div id="authContainer" class="d-flex align-items-center gap-2">
+
+                            <a href="login.html" class="btn btn-outline-primary auth-btn">
+
+                                Login
+
+                            </a>
+
+                            <a href="register.html" class="btn btn-primary auth-btn">
+
+                                Sign Up
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- =========================
+         Blog Banner
+    ========================= -->
+
+        <section class="blog-banner">
+
+            <div class="container">
+
+                <div class="row align-items-center">
+
+                    <div class="col-lg-6">
+
+                        <h1>FloraDaily Blog</h1>
+
+                        <p class="mt-4">
+
+                            Explore expert flower care tips, gifting ideas,
+                            seasonal trends, and inspiration to make every
+                            occasion more memorable with beautiful flowers.
+
+                        </p>
+
+                    </div>
+
+                    <div class="col-lg-6 text-center">
+
+                        <img src="../assets/images/blog-banner.webp" class="img-fluid rounded-4" alt="Blog Banner">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+         Search Blog
+    ========================= -->
+
+        <section class="py-5">
+
+            <div class="container">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text" id="blogSearch" class="form-control" placeholder="Search articles...">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+         Blog Cards
+    ========================= -->
+
+        <section class="pb-5">
+
+            <div class="container">
+
+                <div class="row g-4">
+
+                    <!-- Blog 1 -->
+
+                    <div class="col-lg-4 col-md-6 blog-item" data-title="How to Keep Fresh Flowers Blooming Longer"
+                        data-category="Flower Care">
+
+                        <div class="card product-card h-100">
+
+                            <img src="../assets/images/blog-1.webp" class="card-img-top" alt="Flower Care">
+
+                            <div class="card-body text-center">
+
+                                <h5>How to Keep Fresh Flowers Blooming Longer</h5>
+
+                                <p>
+
+                                    Learn simple flower care techniques to keep your
+                                    bouquets fresh and beautiful for days.
+
+                                </p>
+
+                                <a href="blog-details.html" class="btn btn-primary rounded-pill read-blog" data-id="1">
+
+                                    Read More
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Blog 2 -->
+
+                    <div class="col-lg-4 col-md-6 blog-item" data-title="Easy Flower Care Tips for Every Home"
+                        data-category="Flower Care">
+
+                        <div class="card product-card h-100">
+
+                            <img src="../assets/images/blog-2.webp" class="card-img-top" alt="Flower Tips">
+
+                            <div class="card-body text-center">
+
+                                <h5>Easy Flower Care Tips for Every Home</h5>
+
+                                <p>
+
+                                    Discover practical tips to maintain freshness,
+                                    fragrance and vibrant colors.
+
+                                </p>
+
+                                <a href="blog-details.html" class="btn btn-primary rounded-pill read-blog" data-id="2">
+
+                                    Read More
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Blog 3 -->
+
+                    <div class="col-lg-4 col-md-6 blog-item" data-title="Choosing Flowers for Your Dream Wedding"
+                        data-category="Wedding">
+
+                        <div class="card product-card h-100">
+
+                            <img src="../assets/images/blog-3.webp" class="card-img-top" alt="Wedding Flowers">
+
+                            <div class="card-body text-center">
+
+                                <h5>Choosing Flowers for Your Dream Wedding</h5>
+
+                                <p>
+
+                                    Explore elegant floral arrangements that perfectly
+                                    complement your wedding celebration.
+
+                                </p>
+
+                                <a href="blog-details.html" class="btn btn-primary rounded-pill read-blog" data-id="3">
+
+                                    Read More
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Blog 4 -->
+
+                    <div class="col-lg-4 col-md-6 blog-item" data-title="Top Birthday Flower Gift Ideas"
+                        data-category="Birthday">
+
+                        <div class="card product-card h-100">
+
+                            <img src="../assets/images/blog-4.webp" class="card-img-top" alt="Birthday Flowers">
+
+                            <div class="card-body text-center">
+
+                                <h5>Top Birthday Flower Gift Ideas</h5>
+
+                                <p>
+
+                                    Surprise your loved ones with meaningful flower
+                                    arrangements designed for birthdays.
+
+                                </p>
+
+                                <a href="blog-details.html" class="btn btn-primary rounded-pill read-blog" data-id="4">
+
+                                    Read More
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Blog 5 -->
+
+                    <div class="col-lg-4 col-md-6 blog-item" data-title="Why Same-Day Flower Delivery Matters"
+                        data-category="Delivery">
+
+                        <div class="card product-card h-100">
+
+                            <img src="../assets/images/blog-5.webp" class="card-img-top" alt="Flower Delivery">
+
+                            <div class="card-body text-center">
+
+                                <h5>Why Same-Day Flower Delivery Matters</h5>
+
+                                <p>
+
+                                    Find out how fast flower delivery creates memorable
+                                    gifting experiences.
+
+                                </p>
+
+                                <a href="blog-details.html" class="btn btn-primary rounded-pill read-blog" data-id="5">
+
+                                    Read More
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Blog 6 -->
+
+                    <div class="col-lg-4 col-md-6 blog-item" data-title="Trending Floral Styles for 2026"
+                        data-category="Floral Trends">
+
+                        <div class="card product-card h-100">
+
+                            <img src="../assets/images/blog-6.webp" class="card-img-top" alt="Flower Trends">
+
+                            <div class="card-body text-center">
+
+                                <h5>Trending Floral Styles for 2026</h5>
+
+                                <p>
+
+                                    Explore the latest bouquet styles, color palettes,
+                                    and floral design inspirations.
+
+                                </p>
+
+                                <a href="blog-details.html" class="btn btn-primary rounded-pill read-blog" data-id="6">
+
+                                    Read More
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =========================
+     Footer
+========================= -->
+
+    <footer class="footer py-5">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+
+                    <h3 class="logo-text">FloraDaily</h3>
+
+                    <p>
+
+                        Fresh flowers and thoughtful gifts delivered with love
+                        for every special occasion.
+
+                    </p>
+
+                </div>
+
+                <div class="col-lg-2">
+
+                    <h5>Quick Links</h5>
+
+                    <ul class="list-unstyled">
+
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="catalog.html">Shop</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-3">
+
+                    <h5>Services</h5>
+
+                    <ul class="list-unstyled">
+
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="same-day-delivery.html">Same-Day Delivery</a></li>
+                        <li><a href="occasions.html">Occasions</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-3">
+
+                    <h5>Contact</h5>
+
+                    <p>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        +1 234 567 890
+
+                    </p>
+
+                    <p>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        support@floradaily.com
+
+                    </p>
+
+                    <div class="d-flex gap-3 mt-3">
+
+                        <a href="404.html">
+
+                            <i class="fab fa-facebook-f"></i>
+
+                        </a>
+
+                        <a href="404.html">
+
+                            <i class="fab fa-instagram"></i>
+
+                        </a>
+
+                        <a href="404.html">
+
+                            <i class="fab fa-x-twitter"></i>
+
+                        </a>
+
+                        <a href="404.html">
+
+                            <i class="fab fa-whatsapp"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="text-center">
+
+                <p class="mb-0">
+
+                    &copy; 2026 FloraDaily. All Rights Reserved.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Main JS -->
+
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

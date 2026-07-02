@@ -1,0 +1,547 @@
+/*=====================================
+    DARK MODE VARIABLES
+=====================================*/
+
+body.dark-mode {
+
+    --color-primary: #E91E8C;
+    --color-bg: #1C1C1C;
+    --color-text: #F5F5F5;
+    --color-section: #2A2A2A;
+    --color-sidebar: #252525;
+
+    background: var(--color-bg);
+    color: var(--color-text);
+
+}
+
+
+/*=====================================
+        GLOBAL TEXT FIX
+======================================*/
+
+body.dark-mode .text-muted {
+
+    color: #cfcfcf !important;
+
+}
+
+/*=====================================
+    BODY
+=====================================*/
+
+body.dark-mode {
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+/*=====================================
+    NAVBAR
+=====================================*/
+
+body.dark-mode .navbar {
+    background: #252525 !important;
+}
+
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link {
+    color: var(--color-text) !important;
+}
+
+body.dark-mode .nav-link:hover,
+body.dark-mode .nav-link.active {
+    color: var(--color-primary) !important;
+}
+
+
+
+/*=====================================
+        SAME DAY DELIVERY - DARK MODE
+======================================*/
+
+body.dark-mode .feature-card {
+
+    background: #ffffff;
+
+    color: #333;
+
+}
+
+body.dark-mode .feature-card h4 {
+
+    color: #222;
+
+}
+
+body.dark-mode .feature-card p {
+
+    color: #555;
+
+}
+
+body.dark-mode .feature-card i {
+
+    color: var(--color-primary);
+
+}
+
+/*=====================================
+    SECTIONS
+=====================================*/
+
+body.dark-mode .hero-section,
+body.dark-mode .featured-products,
+body.dark-mode .testimonial-section,
+body.dark-mode .newsletter {
+    background: var(--color-section);
+}
+
+body.dark-mode .occasion-section,
+body.dark-mode .gift-bundles,
+body.dark-mode .how-it-works {
+    background: var(--color-bg);
+}
+
+/*=====================================
+    CARDS
+=====================================*/
+
+body.dark-mode .card,
+body.dark-mode .hero-feature {
+    background: #2F2F2F;
+    color: var(--color-text);
+}
+
+body.dark-mode .card h1,
+body.dark-mode .card h2,
+body.dark-mode .card h3,
+body.dark-mode .card h4,
+body.dark-mode .card h5,
+body.dark-mode .card h6 {
+    color: var(--color-text);
+}
+
+body.dark-mode .card p {
+    color: #D0D0D0;
+}
+
+body.dark-mode .pricing-card.featured {
+    background: var(--color-primary);
+    color: #FFFFFF;
+}
+
+body.dark-mode .pricing-card.featured h1,
+body.dark-mode .pricing-card.featured h2,
+body.dark-mode .pricing-card.featured h3,
+body.dark-mode .pricing-card.featured h4,
+body.dark-mode .pricing-card.featured h5,
+body.dark-mode .pricing-card.featured p {
+    color: #FFFFFF;
+}
+
+/*=====================================
+    BUTTONS
+=====================================*/
+
+body.dark-mode .btn-outline-primary {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+body.dark-mode .btn-outline-primary:hover {
+    background: var(--color-primary);
+    color: #FFFFFF;
+}
+
+/*=====================================
+    FORM ELEMENTS
+=====================================*/
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background: #333333;
+    color: var(--color-text);
+    border: 1px solid #555555;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #BDBDBD;
+}
+
+/*=====================================
+    FOOTER
+=====================================*/
+
+body.dark-mode .footer {
+    background: #111111;
+}
+
+body.dark-mode .footer a {
+    color: #DDDDDD;
+}
+
+body.dark-mode .footer a:hover {
+    color: var(--color-primary);
+}
+
+/*=====================================
+    ICONS
+=====================================*/
+
+body.dark-mode i {
+    color: inherit;
+}
+
+/*=====================================
+    TRANSITION
+=====================================*/
+
+body,
+.navbar,
+.card,
+.hero-feature,
+.footer,
+input,
+textarea,
+select,
+button,
+section {
+    transition: all 0.3s ease;
+}
+
+/*=====================================
+    AUTHENTICATION PAGES
+=====================================*/
+
+/* Header */
+
+body.dark-mode .register-header h1,
+body.dark-mode .login-header h1,
+body.dark-mode .forgot-header h1 {
+
+    color: #ffffff;
+
+}
+
+body.dark-mode .register-header p,
+body.dark-mode .login-header p,
+body.dark-mode .forgot-header p {
+
+    color: #cfcfcf !important;
+
+}
+
+/* Cards */
+
+body.dark-mode .register-section .card,
+body.dark-mode .login-section .card,
+body.dark-mode .forgot-section .card {
+
+    background: #2d2d2d;
+
+    color: #ffffff;
+
+}
+
+/* Form Headings */
+
+body.dark-mode .register-section h3,
+body.dark-mode .login-section h3,
+body.dark-mode .forgot-section h3 {
+
+    color: #ffffff;
+
+}
+
+body.dark-mode .register-section .text-muted,
+body.dark-mode .login-section .text-muted,
+body.dark-mode .forgot-section .text-muted {
+
+    color: #cfcfcf !important;
+
+}
+
+/* Labels */
+
+body.dark-mode .register-section label,
+body.dark-mode .login-section label,
+body.dark-mode .forgot-section label {
+
+    color: #ffffff;
+
+}
+
+/* Inputs */
+
+body.dark-mode .register-section .form-control,
+body.dark-mode .login-section .form-control,
+body.dark-mode .forgot-section .form-control {
+
+    background: #3a3a3a;
+
+    color: #ffffff;
+
+    border: 1px solid #555;
+
+}
+
+body.dark-mode .register-section .form-control::placeholder,
+body.dark-mode .login-section .form-control::placeholder,
+body.dark-mode .forgot-section .form-control::placeholder {
+
+    color: #bdbdbd;
+
+}
+
+/* Eye Button */
+
+body.dark-mode .register-section .input-group .btn,
+body.dark-mode .login-section .input-group .btn {
+
+    background: #3a3a3a;
+
+    color: #ffffff;
+
+    border-color: #555;
+
+}
+
+/* Links */
+
+body.dark-mode .register-section a,
+body.dark-mode .login-section a,
+body.dark-mode .forgot-section a {
+
+    color: #ff7bbd;
+
+}
+
+body.dark-mode .register-section a:hover,
+body.dark-mode .login-section a:hover,
+body.dark-mode .forgot-section a:hover {
+
+    color: #ff4da6;
+
+}
+
+/* Checkbox */
+
+body.dark-mode .form-check-label {
+
+    color: #ffffff;
+
+}
+
+body.dark-mode .alert-success {
+
+    background: #1d4d34;
+
+    color: #ffffff;
+
+    border: none;
+
+}
+
+/*=====================================
+        404 PAGE
+======================================*/
+
+body.dark-mode .error-404 h2 {
+
+    color: #ffffff;
+
+}
+
+body.dark-mode .error-404 p {
+
+    color: #d6d6d6 !important;
+
+}
+
+/*=====================================
+        COMING SOON
+======================================*/
+
+body.dark-mode .coming-text {
+
+    color: #d6d6d6;
+
+}
+
+/*=====================================
+    SAME DAY DELIVERY FIX
+======================================*/
+
+/*=====================================
+        WHY CHOOSE US - DARK MODE
+======================================*/
+
+body.dark-mode .delivery-card {
+
+    background: #ffffff;
+
+}
+
+body.dark-mode .delivery-card h5 {
+
+    color: #222222;
+
+}
+
+body.dark-mode .delivery-card p {
+
+    color: #666666;
+
+}
+
+body.dark-mode .delivery-card i {
+
+    color: var(--color-primary);
+
+}
+
+body.dark-mode .text-muted {
+
+    color: #bdbdbd !important;
+
+}
+
+/*=====================================
+        HOW IT WORKS - DARK MODE
+======================================*/
+
+body.dark-mode .delivery-process {
+
+    background: var(--color-bg);
+
+}
+
+body.dark-mode .delivery-process h2 {
+
+    color: #ffffff;
+
+}
+
+body.dark-mode .delivery-process .text-muted {
+
+    color: #bdbdbd !important;
+
+}
+
+body.dark-mode .timeline-item h6 {
+
+    color: #ffffff;
+
+}
+
+body.dark-mode .timeline-icon {
+
+    background: #ffe4ef;
+
+}
+
+body.dark-mode .timeline-icon i {
+
+    color: var(--color-primary);
+
+}
+
+body.dark-mode .timeline-line {
+
+    background: #f6bfd7;
+
+}
+
+/*=====================================
+        DELIVERY PROMISE - DARK MODE
+======================================*/
+
+body.dark-mode .delivery-promise {
+
+    background: var(--color-section);
+
+}
+
+body.dark-mode .delivery-promise h2 {
+
+    color: #ffffff;
+
+}
+
+body.dark-mode .delivery-promise .text-muted {
+
+    color: #cfcfcf !important;
+
+}
+
+body.dark-mode .delivery-promise .section-badge {
+
+    background: rgba(233, 30, 140, .15);
+
+    color: var(--color-primary);
+
+}
+
+body.dark-mode .promise-list div {
+
+    color: #ffffff;
+
+}
+
+body.dark-mode .promise-list i {
+
+    color: var(--color-primary);
+
+}
+
+/*=====================================
+        DELIVERY AREAS - DARK MODE
+======================================*/
+
+body.dark-mode .area-card {
+
+    background: #ffffff;
+
+    border: 1px solid #e5e5e5;
+
+}
+
+body.dark-mode .area-card h5 {
+
+    color: #222222;
+
+}
+
+body.dark-mode .area-card i {
+
+    color: var(--color-primary);
+
+}
+
+body.dark-mode .area-card:hover {
+
+    transform: translateY(-5px);
+
+}
+
+/*=====================================
+        HERO BADGE - DARK MODE
+======================================*/
+
+body.dark-mode .hero-badge {
+
+    background: rgba(233, 30, 140, .15);
+
+    color: var(--color-primary);
+
+    border: 1px solid rgba(233, 30, 140, .35);
+
+}
+
+body.dark-mode .hero-badge i {
+
+    color: var(--color-primary);
+
+}

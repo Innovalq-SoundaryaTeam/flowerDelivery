@@ -1,0 +1,365 @@
+/*=====================================
+        DASHBOARD DARK MODE
+======================================*/
+
+body.dark-mode .dashboard-banner {
+
+    background: #252525;
+
+    color: #fff;
+
+}
+
+body.dark-mode .dashboard-banner h1 {
+
+    color: #fff;
+
+}
+
+body.dark-mode .dashboard-banner p {
+
+    color: #d5d5d5;
+
+}
+
+body.dark-mode .dashboard-badge {
+
+    background: #333;
+
+    color: #ff5ca8;
+
+}
+
+body.dark-mode .dashboard-link {
+
+    background: #2b2b2b;
+
+    color: #fff;
+
+}
+
+body.dark-mode .dashboard-link:hover,
+
+body.dark-mode .dashboard-link.active {
+
+    background: var(--primary-color);
+
+    color: #fff;
+
+}
+
+body.dark-mode .dashboard-card,
+
+body.dark-mode .overview-card,
+
+body.dark-mode .dashboard-table {
+
+    background: #2a2a2a;
+
+    color: #fff;
+
+}
+
+body.dark-mode .dashboard-card h5,
+
+body.dark-mode .overview-card h3,
+
+body.dark-mode .overview-card h6 {
+
+    color: #fff;
+
+}
+
+body.dark-mode .dashboard-card p,
+
+body.dark-mode .overview-card small,
+
+body.dark-mode .section-title p {
+
+    color: #cfcfcf;
+
+}
+
+body.dark-mode .dashboard-icon {
+
+    background: #3a3a3a;
+
+}
+
+body.dark-mode .dashboard-table thead {
+
+    background: #333;
+
+}
+
+body.dark-mode .dashboard-table th {
+
+    color: #fff;
+
+}
+
+body.dark-mode .table {
+
+    color: #fff;
+
+}
+
+body.dark-mode .table-hover>tbody>tr:hover>* {
+
+    color: #fff;
+
+}
+
+body.dark-mode .dashboard-table td,
+body.dark-mode .dashboard-table td strong,
+body.dark-mode .dashboard-table tbody tr td {
+
+    color: #f5f5f5 !important;
+
+}
+
+body.dark-mode .dashboard-table thead th {
+
+    color: #ffffff !important;
+
+}
+
+body.dark-mode .dashboard-table tbody tr:hover {
+
+    background: #353535;
+
+}
+
+body.dark-mode .progress-bar-dashboard {
+
+    background: #444;
+
+}
+
+body.dark-mode .recommended-products .product-card {
+
+    background: #2a2a2a;
+
+    color: #fff;
+
+}
+
+
+/* =====================================
+   Bootstrap Table Dark Fix
+===================================== */
+
+body.dark-mode .table {
+
+    --bs-table-bg: #2b2b2b;
+
+    --bs-table-color: #ffffff;
+
+    --bs-table-border-color: #444;
+
+    --bs-table-hover-bg: #383838;
+
+    --bs-table-hover-color: #ffffff;
+
+    color: #ffffff !important;
+
+}
+
+body.dark-mode .orders-banner {
+
+    background: #2b2b2b;
+
+}
+
+body.dark-mode .orders-banner h1 {
+
+    color: #fff;
+
+}
+
+body.dark-mode .orders-banner p {
+
+    color: #ccc;
+
+}
+
+body.dark-mode .order-card {
+
+    background: #2b2b2b;
+
+}
+
+body.dark-mode .order-id,
+
+body.dark-mode .order-card h4,
+
+body.dark-mode .order-card li {
+
+    color: #fff;
+
+}
+
+body.dark-mode .order-date {
+
+    color: #bbb;
+
+}
+
+body.dark-mode .orders-top .form-control,
+
+body.dark-mode .orders-top .form-select {
+
+    background: #1f1f1f;
+
+    border-color: #444;
+
+    color: #fff;
+
+}
+
+body.dark-mode .back-orders-btn {
+
+    border-color: var(--primary-color);
+
+    color: #fff;
+
+}
+
+body.dark-mode .back-orders-btn:hover {
+
+    background: var(--primary-color);
+
+    color: #fff;
+
+}
+
+body.dark-mode .track-banner {
+
+    background: #2b2b2b;
+
+}
+
+body.dark-mode .track-banner h1 {
+
+    color: #fff;
+
+}
+
+body.dark-mode .track-banner p {
+
+    color: #ccc;
+
+}
+
+body.dark-mode .track-card {
+
+    background: #2b2b2b;
+
+}
+
+body.dark-mode .track-card h3,
+
+body.dark-mode .timeline-content h5 {
+
+    color: #fff;
+
+}
+
+body.dark-mode .track-summary-item p {
+
+    color: #ccc;
+
+}
+
+body.dark-mode .timeline-item::before {
+
+    background: #555;
+
+}
+
+
+body.dark-mode .history-banner {
+
+    background: #2f2f2f;
+
+}
+
+body.dark-mode .history-banner p {
+
+    color: #cfcfcf;
+
+}
+
+body.dark-mode .search-box input,
+
+body.dark-mode #historyFilter {
+
+    background: #2f2f2f;
+
+    color: #fff;
+
+    border-color: #555;
+
+}
+
+body.dark-mode .search-box input::placeholder {
+
+    color: #aaa;
+
+}
+
+body.dark-mode .history-card {
+
+    background: #2f2f2f;
+
+}
+
+body.dark-mode .history-products {
+
+    color: #ccc;
+
+}
+
+body.dark-mode .history-date {
+
+    color: #aaa;
+
+}
+
+/*=====================================
+        DARK MODE
+======================================*/
+
+body.dark-mode .auth-card {
+
+    background: #2f2f2f;
+
+}
+
+body.dark-mode .auth-description {
+
+    color: #cccccc;
+
+}
+
+body.dark-mode .auth-card .form-control {
+
+    background: #1f1f1f;
+
+    border-color: #555;
+
+    color: #ffffff;
+
+}
+
+body.dark-mode .auth-card .form-control::placeholder {
+
+    color: #999;
+
+}
+
+body.dark-mode .back-login {
+
+    color: #ff6fa7;
+
+}

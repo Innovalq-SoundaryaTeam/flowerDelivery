@@ -1,0 +1,179 @@
+=========================================================
+FLORA DAILY
+Customization Guide
+=========================================================
+
+This guide explains how to customize the website according to your needs.
+
+---------------------------------------------------------
+1. Change Website Name
+---------------------------------------------------------
+
+Open all HTML files and replace:
+
+Flora Daily
+
+with your own brand name.
+
+Also update:
+
+• Page Titles
+• Navbar Logo
+• Footer
+• Copyright
+
+---------------------------------------------------------
+2. Replace Logo
+---------------------------------------------------------
+
+Replace your logo inside:
+
+assets/images/
+
+Update the image path in the navbar.
+
+---------------------------------------------------------
+3. Change Theme Colors
+---------------------------------------------------------
+
+Main stylesheet:
+
+assets/css/style.css
+
+Dark mode:
+
+assets/css/dark-mode.css
+
+Primary colors can be modified by changing:
+
+• Background colors
+• Button colors
+• Link colors
+• Hover colors
+
+---------------------------------------------------------
+4. Replace Images
+---------------------------------------------------------
+
+Replace images inside:
+
+assets/images/
+
+Maintain the same filenames or update the HTML accordingly.
+
+Recommended format:
+
+.webp
+
+---------------------------------------------------------
+5. Add Products
+---------------------------------------------------------
+
+Product cards are located inside:
+
+catalog.html
+
+Product details are managed using JavaScript.
+
+Update:
+
+• Product Name
+• Price
+• Description
+• Category
+• Image
+
+---------------------------------------------------------
+6. Modify Navigation Menu
+---------------------------------------------------------
+
+Navbar is available in every page.
+
+Update menu items if you add or remove pages.
+
+---------------------------------------------------------
+7. Update Contact Information
+---------------------------------------------------------
+
+Edit:
+
+• Email
+• Phone Number
+• Address
+• Social Media Links
+
+inside Contact page and Footer.
+
+---------------------------------------------------------
+8. Blog Posts
+---------------------------------------------------------
+
+Edit:
+
+blog.html
+
+and
+
+blog-details.html
+
+to update article titles, images, and descriptions.
+
+---------------------------------------------------------
+9. Dashboard Pages
+---------------------------------------------------------
+
+Dashboard pages include:
+
+• Home
+• Orders
+• Track Orders
+• Order History
+• Profile
+
+Customize the dashboard content according to your project requirements.
+
+---------------------------------------------------------
+10. JavaScript
+---------------------------------------------------------
+
+Main functionality is located in:
+
+assets/js/
+
+Includes:
+
+• Authentication
+• Cart
+• Wishlist
+• Product Details
+• Search
+• Filters
+• Validation
+• Checkout
+• Dashboard
+
+Modify only the required functions.
+
+---------------------------------------------------------
+11. Responsive Design
+---------------------------------------------------------
+
+The project uses Bootstrap Grid.
+
+If you add new sections, ensure they remain responsive across:
+
+• Desktop
+• Tablet
+• Mobile
+
+---------------------------------------------------------
+12. Browser Compatibility
+---------------------------------------------------------
+
+Recommended browsers:
+
+• Google Chrome
+• Microsoft Edge
+• Mozilla Firefox
+
+=========================================================

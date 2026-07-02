@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop | FloraDaily</title>
+
+    <meta name="description" content="Browse our premium flower collections and gift bundles for every occasion.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <link rel="stylesheet" href="../assets/css/dashboard-dark.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+
+            <div class="container">
+
+                <a class="navbar-brand" href="index.html">
+                    <span class="logo-text">FloraDaily</span>
+                </a>
+
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="index.html">Home One</a></li>
+                                <li><a class="dropdown-item" href="index-2.html">Home Two</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="catalog.html">Shop</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="occasions.html">Occasions</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-3">
+
+                        <!-- Dark Mode -->
+
+                        <button id="themeToggle" class="btn btn-light rounded-circle" aria-label="Dark Mode">
+
+                            <i class="fa-solid fa-moon"></i>
+
+                        </button>
+
+                        <!-- RTL -->
+
+                        <button id="rtlToggle" class="btn btn-light rounded-circle" aria-label="Toggle RTL">
+
+                            <i class="fa-solid fa-globe"></i>
+
+                        </button>
+
+                        <!-- Cart -->
+
+                        <a href="cart.html" class="btn btn-light rounded-circle position-relative" aria-label="Cart">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                            <span id="headerCartCount" class="badge rounded-pill bg-primary position-absolute top-0 start-100 translate-middle" style="font-size:0.65rem;">0</span>
+
+                        </a>
+
+                        <div id="authContainer" class="d-flex align-items-center gap-3">
+
+
+                            <a href="login.html" class="btn btn-outline-primary auth-btn">
+
+                                Login
+
+                            </a>
+
+                            <a href="register.html" class="btn btn-primary auth-btn">
+
+                                Sign Up
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!--=====================================
+                    CHECKOUT HERO
+        ======================================-->
+
+        <section class="checkout-hero py-5">
+
+            <div class="container">
+
+                <div class="checkout-banner">
+
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-6">
+
+                            <span class="dashboard-badge">
+
+                                <i class="fa-solid fa-credit-card me-2"></i>
+
+                                Secure Checkout
+
+                            </span>
+
+                            <h1>
+
+                                Complete Your Order
+
+                            </h1>
+
+                            <p>
+
+                                You're just one step away from sending smiles. Fill in your delivery details and
+                                complete your purchase securely.
+
+                            </p>
+
+                        </div>
+
+                        <div class="col-lg-6 text-end">
+
+                            <img src="../assets/images/checkout-banner.webp" class="img-fluid checkout-banner-image"
+                                alt="Checkout">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--=====================================
+                    CHECKOUT
+        ======================================-->
+
+        <section class="checkout-section py-5">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <!-- Left -->
+
+                    <div class="col-lg-8">
+
+                        <!-- Delivery Information -->
+
+                        <div class="checkout-card mb-4">
+
+                            <h3>
+
+                                Delivery Information
+
+                            </h3>
+
+                            <hr>
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label>
+
+                                        Full Name
+
+                                    </label>
+
+                                    <input type="text" id="checkoutName" class="form-control">
+
+                                    <small id="checkoutNameError" class="text-danger d-none">
+                                    </small>
+
+
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label>
+
+                                        Email
+
+                                    </label>
+
+                                    <input type="email" id="checkoutEmail" class="form-control">
+
+                                    <small id="checkoutEmailError" class="text-danger d-none"></small>
+
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label>
+
+                                        Phone Number
+
+                                    </label>
+
+                                    <input type="text" id="checkoutPhone" class="form-control">
+                                    <small id="checkoutPhoneError" class="text-danger d-none"></small>
+
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label>
+
+                                        City
+
+                                    </label>
+
+                                    <input type="text" id="checkoutCity" class="form-control">
+                                    <small id="checkoutCityError" class="text-danger d-none"></small>
+
+                                </div>
+
+                                <div class="col-12 mb-3">
+
+                                    <label>
+
+                                        Address
+
+                                    </label>
+
+                                    <textarea id="checkoutAddress" rows="3" class="form-control"></textarea>
+                                    <small id="checkoutAddressError" class="text-danger d-none"></small>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <label>
+
+                                        State
+
+                                    </label>
+
+                                    <input type="text" id="checkoutState" class="form-control">
+                                    <small id="checkoutStateError" class="text-danger d-none"></small>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <label>
+
+                                        Pincode
+
+                                    </label>
+
+                                    <input type="text" id="checkoutPincode" class="form-control">
+                                    <small id="checkoutPincodeError" class="text-danger d-none"></small>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Delivery Method -->
+
+                        <div class="checkout-card mb-4">
+
+                            <h3>
+
+                                Delivery Method
+
+                            </h3>
+
+                            <hr>
+
+                            <div class="form-check">
+
+                                <input class="form-check-input delivery-option" type="radio" name="delivery" value="0"
+                                    checked>
+
+                                <label class="form-check-label">
+
+                                    Standard Delivery (Free)
+
+                                </label>
+
+                            </div>
+
+                            <div class="form-check mt-3">
+
+                                <input class="form-check-input delivery-option" type="radio" name="delivery" value="10">
+
+                                <label class="form-check-label">
+
+                                    Same Day Delivery (+$10)
+
+                                </label>
+
+                            </div>
+
+                            <div class="form-check mt-3">
+
+                                <input class="form-check-input delivery-option" type="radio" name="delivery" value="20">
+
+                                <label class="form-check-label">
+
+                                    Midnight Delivery (+$20)
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Payment -->
+
+                        <div class="checkout-card">
+
+                            <h3>
+
+                                Payment Method
+
+                            </h3>
+
+                            <hr>
+
+                            <div class="form-check">
+
+                                <input class="form-check-input" type="radio" name="payment" id="paymentCOD" checked>
+
+                                <label for="paymentCOD">
+
+                                    Cash On Delivery
+
+                                </label>
+
+                            </div>
+
+                            <div class="form-check mt-3">
+
+                                <input class="form-check-input" type="radio" name="payment" id="paymentCard">
+
+                                <label for="paymentCard">
+
+                                    Credit / Debit Card
+
+                                </label>
+
+                            </div>
+
+                            <!-- Card Details Panel -->
+
+                            <div id="cardPaymentDetails" class="card-details-panel d-none">
+
+                                <div class="row">
+
+                                    <div class="col-12 mb-3">
+
+                                        <label>
+                                            Card Number
+                                        </label>
+
+                                        <div class="card-number-field">
+
+                                            <i class="fa-solid fa-credit-card card-field-icon"></i>
+
+                                            <input type="text" id="cardNumber" class="form-control"
+                                                placeholder="1234 5678 9012 3456" inputmode="numeric" maxlength="19">
+
+                                            <div class="card-brand-icons">
+
+                                                <i class="fa-brands fa-cc-visa" data-brand="visa"></i>
+                                                <i class="fa-brands fa-cc-mastercard" data-brand="mastercard"></i>
+                                                <i class="fa-brands fa-cc-amex" data-brand="amex"></i>
+
+                                            </div>
+
+                                        </div>
+
+                                        <small id="cardNumberError" class="text-danger d-none"></small>
+
+                                    </div>
+
+                                    <div class="col-12 mb-3">
+
+                                        <label>
+                                            Name on Card
+                                        </label>
+
+                                        <input type="text" id="cardName" class="form-control"
+                                            placeholder="As shown on card">
+
+                                        <small id="cardNameError" class="text-danger d-none"></small>
+
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label>
+                                            Expiry Date
+                                        </label>
+
+                                        <input type="text" id="cardExpiry" class="form-control" placeholder="MM/YY"
+                                            inputmode="numeric" maxlength="5">
+
+                                        <small id="cardExpiryError" class="text-danger d-none"></small>
+
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label>
+                                            CVV
+                                        </label>
+
+                                        <input type="password" id="cardCvv" class="form-control" placeholder="•••"
+                                            inputmode="numeric" maxlength="4" autocomplete="off">
+
+                                        <small id="cardCvvError" class="text-danger d-none"></small>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="secure-note">
+
+                                    <i class="fa-solid fa-lock me-2"></i>
+                                    Your payment information is encrypted and secure.
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-check mt-3">
+
+                                <input class="form-check-input" type="radio" name="payment" id="paymentUPI">
+
+                                <label for="paymentUPI">
+
+                                    UPI Payment
+
+                                </label>
+
+                            </div>
+
+                            <div class="form-check mt-3">
+
+                                <input class="form-check-input" type="radio" name="payment" id="paymentNetBanking">
+
+                                <label for="paymentNetBanking">
+
+                                    Net Banking
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Right -->
+
+                    <div class="col-lg-4">
+
+                        <div class="checkout-summary">
+
+                            <h3>
+
+                                Order Summary
+
+                            </h3>
+
+                            <hr>
+
+                            <div id="checkoutProducts">
+
+                                <!-- JS -->
+
+                            </div>
+
+                            <hr>
+
+                            <div class="summary-item">
+
+                                <span>
+
+                                    Subtotal
+
+                                </span>
+
+                                <span id="checkoutSubtotal">
+
+                                    $0.00
+
+                                </span>
+
+                            </div>
+
+                            <div class="summary-item">
+
+                                <span>
+
+                                    Delivery
+
+                                </span>
+
+                                <span id="checkoutDelivery">
+
+                                    $0.00
+
+                                </span>
+
+                            </div>
+
+                            <div class="summary-item">
+
+                                <span>
+
+                                    Tax
+
+                                </span>
+
+                                <span id="checkoutTax">
+
+                                    $0.00
+
+                                </span>
+
+                            </div>
+
+                            <hr>
+
+                            <div class="summary-total">
+
+                                <span>
+
+                                    Total
+
+                                </span>
+
+                                <span id="checkoutTotal">
+
+                                    $0.00
+
+                                </span>
+
+                            </div>
+
+                            <button id="placeOrderBtn" class="btn btn-primary rounded-pill w-100 mt-4">
+
+                                <i class="fa-solid fa-check me-2"></i>
+
+                                Place Order
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="footer py-5">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+
+                    <h3 class="logo-text">FloraDaily</h3>
+
+                    <p>
+
+                        Fresh flowers and thoughtful gifts delivered with love
+                        for every special occasion.
+
+                    </p>
+
+                </div>
+
+                <div class="col-lg-2">
+
+                    <h5>Quick Links</h5>
+
+                    <ul class="list-unstyled">
+
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="catalog.html">Shop</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-3">
+
+                    <h5>Services</h5>
+
+                    <ul class="list-unstyled">
+
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="same-day-delivery.html">Same-Day Delivery</a></li>
+                        <li><a href="occasions.html">Occasions</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-3">
+
+                    <h5>Contact</h5>
+
+                    <p><i class="fa-solid fa-phone"></i> +1 234 567 890</p>
+
+                    <p><i class="fa-solid fa-envelope"></i> support@floradaily.com</p>
+
+                    <div class="d-flex gap-3 mt-3">
+
+                        <a href="404.html">
+
+                            <i class="fab fa-facebook-f"></i>
+
+                        </a>
+
+                        <a href="404.html">
+
+                            <i class="fab fa-instagram"></i>
+
+                        </a>
+
+                        <a href="404.html">
+
+                            <i class="fab fa-x-twitter"></i>
+
+                        </a>
+
+                        <a href="404.html">
+
+                            <i class="fab fa-whatsapp"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="text-center">
+
+                <p class="mb-0">
+
+                    &copy; 2026 FloraDaily. All Rights Reserved.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Main JS -->
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+
+</body>
+
+</html>

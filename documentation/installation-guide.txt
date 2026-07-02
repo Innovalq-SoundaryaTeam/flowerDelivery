@@ -1,0 +1,140 @@
+=========================================================
+FLORA DAILY
+Installation Guide
+=========================================================
+
+System Requirements
+-------------------
+
+Operating System
+• Windows
+• Linux
+• macOS
+
+Browser
+• Google Chrome (Recommended)
+• Microsoft Edge
+• Mozilla Firefox
+
+Code Editor
+• Visual Studio Code
+
+Recommended VS Code Extensions
+------------------------------
+
+• Live Server
+• Prettier
+• Bootstrap 5 Snippets
+• HTML CSS Support
+• Auto Rename Tag
+• Path Intellisense
+
+---------------------------------------------------------
+Installation Steps
+---------------------------------------------------------
+
+Step 1
+
+Extract the project ZIP file.
+
+Step 2
+
+Open the project folder using Visual Studio Code.
+
+Step 3
+
+Install the Live Server extension if it is not already installed.
+
+Step 4
+
+Open:
+
+pages/index.html
+
+Step 5
+
+Right-click the file and select:
+
+Open with Live Server
+
+OR
+
+Click the "Go Live" button in the bottom-right corner.
+
+The project will open automatically in your default browser.
+
+---------------------------------------------------------
+Project Structure
+---------------------------------------------------------
+
+assets/
+    css/
+    js/
+    images/
+    fonts/
+
+pages/
+
+README.md
+
+---------------------------------------------------------
+Configuration
+---------------------------------------------------------
+
+No additional installation is required.
+
+No database setup is required.
+
+No backend server is required.
+
+No package installation is required.
+
+This is a fully front-end project.
+
+---------------------------------------------------------
+Supported Features
+---------------------------------------------------------
+
+✔ Responsive Design
+
+✔ Dark Mode
+
+✔ Product Catalog
+
+✔ Wishlist
+
+✔ Shopping Cart
+
+✔ Checkout
+
+✔ Authentication Pages
+
+✔ Dashboard
+
+✔ Contact Form Validation
+
+✔ Blog Pages
+
+✔ Product Details
+
+✔ Order Tracking
+
+---------------------------------------------------------
+Troubleshooting
+---------------------------------------------------------
+
+If CSS or JavaScript is not loading:
+
+• Ensure the folder structure is unchanged.
+• Check relative file paths.
+• Run the project using Live Server.
+
+If images are missing:
+
+• Verify the image exists inside:
+
+assets/images/
+
+• Ensure the filename matches exactly.
+
+=========================================================
