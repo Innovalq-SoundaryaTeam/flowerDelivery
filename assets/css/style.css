@@ -929,15 +929,23 @@ body {
     }
 
     .navbar-nav {
-        text-align: center;
+        text-align: left;
+        align-items: flex-start;
         margin: 20px 0;
+        padding-left: 4px;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 0;
+        padding: 8px 0;
     }
 
     #mainNavbar > .d-flex {
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
         row-gap: 12px;
         padding-top: 10px;
+        padding-left: 4px;
         border-top: 1px solid rgba(0, 0, 0, .08);
     }
 
