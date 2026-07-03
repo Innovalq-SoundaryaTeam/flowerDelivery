@@ -509,23 +509,33 @@ if (addToCartBtn) {
 
         e.preventDefault();
 
-        const product = {
+        const name = document.getElementById("productTitle").innerText;
 
-            name: document.getElementById("productTitle").innerText,
+        const price = document.getElementById("productPrice").innerText.replace("$", "");
 
-            price: document.getElementById("productPrice").innerText.replace("$", ""),
+        const image = document.getElementById("productImage").src;
 
-            image: document.getElementById("productImage").src,
+        const quantityValue = parseInt(document.getElementById("quantity").value);
 
-            quantity: parseInt(document.getElementById("quantity").value)
-
-        };
+        const quantity = (!quantityValue || quantityValue < 1) ? 1 : quantityValue;
 
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-        cart.push(product);
+        const existing = cart.find(item => item.name === name);
+
+        if (existing) {
+
+            existing.quantity = (existing.quantity || 1) + quantity;
+
+        } else {
+
+            cart.push({ name, price, image, quantity });
+
+        }
 
         localStorage.setItem("cart", JSON.stringify(cart));
+
+        updateCartCount();
 
         alert("Product added to cart successfully!");
 
