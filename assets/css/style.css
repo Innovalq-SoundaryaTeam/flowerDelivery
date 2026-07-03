@@ -445,6 +445,40 @@ body {
 }
 
 /*=====================================
+    DEMO CREDENTIALS (Login Page)
+=====================================*/
+
+.demo-credential-row {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.demo-credential-text {
+
+    word-break: break-word;
+    overflow-wrap: break-word;
+
+}
+
+@media (max-width: 576px) {
+
+    .demo-credential-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .demo-credential-row .btn {
+        align-self: flex-end;
+    }
+
+}
+
+/*=====================================
     HERO SECTION
 =====================================*/
 
