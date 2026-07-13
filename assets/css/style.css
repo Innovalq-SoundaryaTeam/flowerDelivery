@@ -313,6 +313,7 @@ body {
     background: var(--color-primary);
     color: var(--color-white);
     transform: scale(1.05);
+    transform-origin: top center;
 
 }
 
