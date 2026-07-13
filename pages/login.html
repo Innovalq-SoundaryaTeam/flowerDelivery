@@ -596,6 +596,16 @@
 
             }
 
+            /* Deep link support: login.html?mode=admin opens straight into Admin Login */
+
+            const urlParams = new URLSearchParams(window.location.search);
+
+            if (urlParams.get("mode") === "admin") {
+
+                setMode("admin");
+
+            }
+
         })();
 
     </script>
