@@ -2736,6 +2736,18 @@ if (authContainer) {
 
                     <li>
 
+                        <a class="dropdown-item" href="dash-home.html">
+
+                            <i class="fa-solid fa-gauge me-2"></i>
+
+                            Dashboard
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
                         <a class="dropdown-item" href="dash-profile.html">
 
                             <i class="fa-solid fa-user me-2"></i>
