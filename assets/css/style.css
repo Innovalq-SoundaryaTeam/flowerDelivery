@@ -1099,6 +1099,7 @@ body.auth-page {
 
 #authContainer {
     order: 2;
+    gap: 14px !important;
 }
 
 .navbar-toggler {
@@ -1116,6 +1117,7 @@ body.auth-page {
 @media (min-width: 1200px) {
     #authContainer {
         order: 5;
+        margin-left: 24px;
     }
 }
 
