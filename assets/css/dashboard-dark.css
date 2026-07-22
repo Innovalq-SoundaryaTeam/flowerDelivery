@@ -233,6 +233,18 @@ body.dark-mode .back-orders-btn:hover {
 
 }
 
+body.dark-mode #emptyOrders h3 {
+
+    color: #fff;
+
+}
+
+body.dark-mode #emptyOrders p {
+
+    color: #ccc;
+
+}
+
 body.dark-mode .track-banner {
 
     background: #2b2b2b;

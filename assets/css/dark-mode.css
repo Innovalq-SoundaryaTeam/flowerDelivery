@@ -26,6 +26,14 @@ body.dark-mode .text-muted {
 
 }
 
+body.dark-mode section p,
+body.dark-mode .hero-feature p,
+body.dark-mode .delivery-card p {
+
+    color: #D0D0D0;
+
+}
+
 /*=====================================
     BODY
 =====================================*/
