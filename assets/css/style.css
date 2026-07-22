@@ -279,6 +279,12 @@ body.auth-page {
     text-align: center;
 }
 
+.auth-topbar .navbar-brand {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+}
+
 .auth-divider {
     display: flex;
     align-items: center;
@@ -996,6 +1002,18 @@ body.auth-page {
 .footer {
     background: var(--color-footer);
     color: var(--color-white);
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo-icon {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
 }
 
 .footer h3,
