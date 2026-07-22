@@ -7,10 +7,13 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Register | FloraDaily</title>
+    <title>Login | FloraDaily</title>
 
     <meta name="description"
-        content="Create your FloraDaily account to shop premium flowers, track orders, and enjoy exclusive offers.">
+        content="Login to your FloraDaily account to shop premium flowers, track orders, and enjoy exclusive offers.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.webp" type="image/webp">
 
     <!-- Google Fonts -->
 
@@ -40,139 +43,25 @@
 
 </head>
 
-<body>
+<body class="auth-page">
 
     <!-- =========================
-         Header
+         Brand Bar (no full nav on auth pages)
     ========================= -->
 
-    <header>
+    <div class="auth-topbar">
 
-        <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+        <a href="index.html" class="navbar-brand d-inline-block">
+            <span class="logo-text">FloraDaily</span>
+        </a>
 
-            <div class="container">
-
-                <!-- Logo -->
-
-                <a class="navbar-brand" href="index.html">
-                    <span class="logo-text">FloraDaily</span>
-                </a>
-
-                <!-- Mobile Toggle -->
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-
-                    <span class="navbar-toggler-icon"></span>
-
-                </button>
-
-                <!-- Navbar -->
-
-                <div class="collapse navbar-collapse" id="mainNavbar">
-
-                    <ul class="navbar-nav mx-auto">
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Home
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="index.html">Home One</a></li>
-                                <li><a class="dropdown-item" href="index-2.html">Home Two</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">
-                                About
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="catalog.html">
-                                Shop
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html">
-                                Services
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="occasions.html">
-                                Occasions
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="pricing.html">
-                                Pricing
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">
-                                Blog
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">
-                                Contact
-                            </a>
-                        </li>
-
-                    </ul>
-
-                    <!-- Right Side -->
-
-                    <div class="d-flex align-items-center gap-3">
-
-                        <!-- Dark Mode -->
-
-                        <button id="themeToggle" class="btn btn-light rounded-circle" aria-label="Dark Mode">
-
-                            <i class="fa-solid fa-moon"></i>
-
-                        </button>
-
-                        <!-- RTL -->
-
-                        <button id="rtlToggle" class="btn btn-light rounded-circle" aria-label="Toggle RTL">
-
-                            <i class="fa-solid fa-globe"></i>
-
-                        </button>
-
-                        <!-- Cart -->
-
-                        <a href="cart.html" class="btn btn-light rounded-circle position-relative" aria-label="Cart">
-
-                            <i class="fa-solid fa-cart-shopping"></i>
-
-                            <span id="headerCartCount" class="badge rounded-pill bg-primary position-absolute top-0 start-100 translate-middle" style="font-size:0.65rem;">0</span>
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </nav>
-
-    </header>
-
+    </div>
 
     <!-- =========================
      Login Header
 ========================= -->
 
-    <section class="login-header pt-5 pb-1">
+    <section class="login-header pt-2 pb-1">
 
         <div class="container">
 
@@ -198,8 +87,6 @@
 
     </section>
 
-    <!-- Login Form Starts -->
-
     <!-- =========================
      Login Form
 ========================= -->
@@ -216,35 +103,15 @@
 
                         <div class="card-body p-5">
 
-                            <!-- Login Mode Toggle -->
-
-                            <div class="login-mode-toggle mb-4" id="loginModeToggle">
-
-                                <button type="button" class="mode-btn active" data-mode="customer" id="customerModeBtn">
-
-                                    <i class="fa-solid fa-user me-2"></i>
-                                    Customer Login
-
-                                </button>
-
-                                <button type="button" class="mode-btn" data-mode="admin" id="adminModeBtn">
-
-                                    <i class="fa-solid fa-user-shield me-2"></i>
-                                    Admin Login
-
-                                </button>
-
-                            </div>
-
                             <div class="text-center mb-4">
 
-                                <h3 class="fw-bold" id="loginTitle">
+                                <h3 class="fw-bold">
 
                                     Login
 
                                 </h3>
 
-                                <p class="text-muted" id="loginSubtitle">
+                                <p class="text-muted">
 
                                     Enter your credentials below.
 
@@ -252,27 +119,7 @@
 
                             </div>
 
-                            <!-- Demo Credentials -->
-
-                            <div class="alert alert-info small mb-4" id="demoCredentialsBox">
-
-                                <strong><i class="fa-solid fa-circle-info me-1"></i> Demo Credentials (for testing)</strong>
-
-                                <div class="demo-credential-row mt-2">
-                                    <span class="demo-credential-text"><strong>Customer:</strong> customer@floradaily.com / Customer@123</span>
-                                    <button type="button" class="btn btn-sm btn-outline-primary" id="fillCustomerDemo">Use</button>
-                                </div>
-
-                                <div class="demo-credential-row mt-2">
-                                    <span class="demo-credential-text"><strong>Admin:</strong> admin@floradaily.com / Admin@123</span>
-                                    <button type="button" class="btn btn-sm btn-outline-primary" id="fillAdminDemo">Use</button>
-                                </div>
-
-                            </div>
-
                             <form id="loginForm">
-
-                                <input type="hidden" id="loginMode" value="customer">
 
                                 <!-- Email -->
 
@@ -379,6 +226,26 @@
 
                             </div>
 
+                            <!-- Social Login -->
+
+                            <div class="auth-divider my-4">
+                                <span>or continue with</span>
+                            </div>
+
+                            <div class="d-flex gap-3">
+
+                                <button type="button" class="btn btn-outline-secondary w-100 rounded-pill social-btn"
+                                    id="googleLoginBtn">
+                                    <i class="fa-brands fa-google me-2"></i> Google
+                                </button>
+
+                                <button type="button" class="btn btn-outline-dark w-100 rounded-pill social-btn"
+                                    id="appleLoginBtn">
+                                    <i class="fa-brands fa-apple me-2"></i> Apple
+                                </button>
+
+                            </div>
+
                         </div>
 
                     </div>
@@ -391,129 +258,6 @@
 
     </section>
 
-
-    <!-- =========================
-     Footer
-========================= -->
-
-    <footer class="footer py-5">
-
-        <div class="container">
-
-            <div class="row g-4">
-
-                <div class="col-lg-4">
-
-                    <h3 class="logo-text">FloraDaily</h3>
-
-                    <p>
-
-                        Fresh flowers and thoughtful gifts delivered with love
-                        for every special occasion.
-
-                    </p>
-
-                </div>
-
-                <div class="col-lg-2">
-
-                    <h5>Quick Links</h5>
-
-                    <ul class="list-unstyled">
-
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="catalog.html">Shop</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-
-                    </ul>
-
-                </div>
-
-                <div class="col-lg-3">
-
-                    <h5>Services</h5>
-
-                    <ul class="list-unstyled">
-
-                        <li><a href="services.html">All Services</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="same-day-delivery.html">Same-Day Delivery</a></li>
-                        <li><a href="occasions.html">Occasions</a></li>
-
-                    </ul>
-
-                </div>
-
-                <div class="col-lg-3">
-
-                    <h5>Contact</h5>
-
-                    <p>
-
-                        <i class="fa-solid fa-phone"></i>
-
-                        +1 234 567 890
-
-                    </p>
-
-                    <p>
-
-                        <i class="fa-solid fa-envelope"></i>
-
-                        support@floradaily.com
-
-                    </p>
-
-                    <div class="d-flex gap-3 mt-3">
-
-                        <a href="404.html">
-
-                            <i class="fab fa-facebook-f"></i>
-
-                        </a>
-
-                        <a href="404.html">
-
-                            <i class="fab fa-instagram"></i>
-
-                        </a>
-
-                        <a href="404.html">
-
-                            <i class="fab fa-x-twitter"></i>
-
-                        </a>
-
-                        <a href="404.html">
-
-                            <i class="fab fa-whatsapp"></i>
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <hr>
-
-            <div class="text-center">
-
-                <p class="mb-0">
-
-                    &copy; 2026 FloraDaily. All Rights Reserved.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </footer>
-
     <!-- Bootstrap JS -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
@@ -522,88 +266,25 @@
 
     <script src="../assets/js/main.js"></script>
 
-    <!-- Login Mode Toggle Script -->
+    <!-- Social Login (demo placeholders) -->
 
     <script>
 
         (function () {
 
-            const customerBtn = document.getElementById("customerModeBtn");
-            const adminBtn = document.getElementById("adminModeBtn");
-            const loginMode = document.getElementById("loginMode");
-            const loginTitle = document.getElementById("loginTitle");
-            const loginSubtitle = document.getElementById("loginSubtitle");
-            const createAccountLink = document.getElementById("createAccountLink");
-            const loginEmail = document.getElementById("loginEmail");
+            const googleBtn = document.getElementById("googleLoginBtn");
+            const appleBtn = document.getElementById("appleLoginBtn");
 
-            function setMode(mode) {
-
-                loginMode.value = mode;
-
-                customerBtn.classList.toggle("active", mode === "customer");
-                adminBtn.classList.toggle("active", mode === "admin");
-
-                if (mode === "admin") {
-
-                    loginTitle.textContent = "Admin Login";
-                    loginSubtitle.textContent = "Sign in with your admin credentials.";
-                    createAccountLink.classList.add("d-none");
-                    loginEmail.placeholder = "Enter admin email";
-
-                } else {
-
-                    loginTitle.textContent = "Login";
-                    loginSubtitle.textContent = "Enter your credentials below.";
-                    createAccountLink.classList.remove("d-none");
-                    loginEmail.placeholder = "Enter your email";
-
-                }
-
-                clearLoginErrors();
-
-            }
-
-            customerBtn.addEventListener("click", () => setMode("customer"));
-            adminBtn.addEventListener("click", () => setMode("admin"));
-
-            /* Demo Credentials Autofill */
-
-            const loginPassword = document.getElementById("loginPassword");
-            const fillCustomerDemo = document.getElementById("fillCustomerDemo");
-            const fillAdminDemo = document.getElementById("fillAdminDemo");
-
-            if (fillCustomerDemo) {
-
-                fillCustomerDemo.addEventListener("click", () => {
-
-                    setMode("customer");
-                    loginEmail.value = "customer@floradaily.com";
-                    loginPassword.value = "Customer@123";
-
+            if (googleBtn) {
+                googleBtn.addEventListener("click", () => {
+                    alert("Google sign-in isn't connected to a real provider in this demo.");
                 });
-
             }
 
-            if (fillAdminDemo) {
-
-                fillAdminDemo.addEventListener("click", () => {
-
-                    setMode("admin");
-                    loginEmail.value = "admin@floradaily.com";
-                    loginPassword.value = "Admin@123";
-
+            if (appleBtn) {
+                appleBtn.addEventListener("click", () => {
+                    alert("Apple sign-in isn't connected to a real provider in this demo.");
                 });
-
-            }
-
-            /* Deep link support: login.html?mode=admin opens straight into Admin Login */
-
-            const urlParams = new URLSearchParams(window.location.search);
-
-            if (urlParams.get("mode") === "admin") {
-
-                setMode("admin");
-
             }
 
         })();

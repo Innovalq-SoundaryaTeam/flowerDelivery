@@ -2474,9 +2474,6 @@ if (loginForm) {
 
         clearLoginErrors();
 
-        const loginModeField = document.getElementById("loginMode");
-        const mode = loginModeField ? loginModeField.value : "customer";
-
         const email =
             document.getElementById("loginEmail").value.trim();
 
@@ -2524,12 +2521,13 @@ if (loginForm) {
 
         /*=====================================
             ADMIN LOGIN
+            (detected by email match — no
+            separate admin mode toggle in the UI)
         =====================================*/
 
-        if (mode === "admin") {
+        if (email.toLowerCase() === ADMIN_CREDENTIALS.email.toLowerCase()) {
 
             if (
-                email !== ADMIN_CREDENTIALS.email ||
                 password !== ADMIN_CREDENTIALS.password
             ) {
 
@@ -2720,13 +2718,13 @@ if (authContainer) {
             <div class="dropdown">
 
                <button
-    class="btn btn-outline-primary auth-user-btn dropdown-toggle"
+    class="profile-dropdown-toggle dropdown-toggle"
     type="button"
     data-bs-toggle="dropdown">
 
-    <i class="fa-solid fa-user"></i>
+    <span class="profile-avatar">${(loggedInUser.name || "U").trim().charAt(0).toUpperCase()}</span>
 
-    <span class="user-name">
+    <span class="profile-name">
 
         ${loggedInUser.name}
 

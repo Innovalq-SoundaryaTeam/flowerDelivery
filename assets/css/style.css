@@ -261,6 +261,38 @@ body {
     padding-top: 90px;
 }
 
+body.auth-page {
+    padding-top: 0;
+}
+
+.auth-topbar {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.auth-divider span {
+    padding: 0 14px;
+}
+
+.social-btn {
+    font-weight: 500;
+}
+
 .navbar {
     z-index: 1050;
 }
@@ -446,6 +478,69 @@ body {
 }
 
 /*=====================================
+    DASHBOARD NAV LINK
+=====================================*/
+
+.dashboard-nav-link {
+
+    height: 40px;
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+
+}
+
+/*=====================================
+    PROFILE DROPDOWN (logged-in nav)
+=====================================*/
+
+.profile-dropdown-toggle {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background: var(--color-section);
+    border: none;
+    border-radius: 50px;
+    padding: 6px 16px 6px 6px;
+
+}
+
+.profile-dropdown-toggle .profile-avatar {
+
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+
+}
+
+.profile-dropdown-toggle .profile-name {
+
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text);
+    max-width: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+/*=====================================
     DEMO CREDENTIALS (Login Page)
 =====================================*/
 
@@ -571,6 +666,13 @@ body {
 
 .occasion-card .card-body {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.occasion-card .occasion-btn {
+    margin-top: auto;
+    align-self: flex-start;
 }
 
 .occasion-card h5 {
@@ -693,6 +795,16 @@ body {
     min-width: 140px;
 }
 
+.blog-card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card-body .read-blog {
+    margin-top: auto;
+    align-self: center;
+}
+
 /*=====================================
     HOW IT WORKS
 =====================================*/
@@ -770,6 +882,8 @@ body {
 
 .testimonial-section .card-body {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .testimonial-section .text-warning i {
@@ -777,7 +891,8 @@ body {
 }
 
 .testimonial-section h5 {
-    margin-top: 20px;
+    margin-top: auto;
+    padding-top: 20px;
     color: var(--color-primary);
 }
 
@@ -934,6 +1049,37 @@ body {
 
     .hero-title {
         font-size: 3.5rem;
+    }
+
+}
+
+@media (max-width:1199.98px) {
+
+    .navbar-nav {
+        text-align: left;
+        align-items: flex-start;
+        margin: 20px 0;
+        padding-left: 4px;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 0;
+        padding: 8px 0;
+    }
+
+    #mainNavbar > .d-flex {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        row-gap: 12px;
+        padding-top: 10px;
+        padding-left: 4px;
+        border-top: 1px solid rgba(0, 0, 0, .08);
+    }
+
+    #mainNavbar .auth-btn,
+    #mainNavbar .dashboard-nav-link {
+        width: auto;
+        padding: 10px 22px;
     }
 
 }

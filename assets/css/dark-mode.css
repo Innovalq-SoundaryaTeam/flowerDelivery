@@ -110,6 +110,20 @@ body.dark-mode .how-it-works {
     background: var(--color-bg);
 }
 
+body.dark-mode .bg-light {
+    background: var(--color-section) !important;
+}
+
+body.dark-mode .dashboard-banner {
+    background: linear-gradient(135deg, #2a2a2a, #1c1c1c);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .3);
+}
+
+body.dark-mode .dashboard-badge {
+    background: #2F2F2F;
+    color: var(--color-primary);
+}
+
 /*=====================================
     CARDS
 =====================================*/
@@ -150,6 +164,21 @@ body.dark-mode .pricing-card.featured p {
 /*=====================================
     BUTTONS
 =====================================*/
+
+body.dark-mode .auth-divider {
+    color: #999999;
+}
+
+body.dark-mode .auth-divider::before,
+body.dark-mode .auth-divider::after {
+    border-bottom-color: #444444;
+}
+
+body.dark-mode .btn-outline-secondary,
+body.dark-mode .btn-outline-dark {
+    color: var(--color-text);
+    border-color: #555555;
+}
 
 body.dark-mode .btn-outline-primary {
     color: var(--color-primary);
