@@ -681,7 +681,7 @@ body.auth-page {
 
 .occasion-card .occasion-btn {
     margin-top: auto;
-    align-self: flex-start;
+    align-self: center;
 }
 
 .occasion-card h5 {
