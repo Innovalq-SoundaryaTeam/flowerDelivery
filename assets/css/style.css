@@ -1093,6 +1093,60 @@ body.auth-page {
 
 }
 
+/*=====================================
+    PERSISTENT AUTH (always visible, outside hamburger)
+=====================================*/
+
+#authContainer {
+    order: 2;
+}
+
+.navbar-toggler {
+    order: 3;
+}
+
+.navbar-brand {
+    order: 1;
+}
+
+.navbar-collapse {
+    order: 4;
+}
+
+@media (min-width: 1200px) {
+    #authContainer {
+        order: 5;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #authContainer {
+        gap: 8px !important;
+    }
+
+    #authContainer .auth-btn {
+        width: auto;
+        height: 36px;
+        padding: 0 14px;
+        font-size: 0.85rem;
+    }
+
+    #authContainer .profile-dropdown-toggle {
+        padding: 4px 12px 4px 4px;
+    }
+
+    #authContainer .profile-dropdown-toggle .profile-avatar {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+
+    #authContainer .profile-dropdown-toggle .profile-name {
+        max-width: 60px;
+        font-size: 0.8rem;
+    }
+}
+
 @media (max-width:768px) {
 
     section {
