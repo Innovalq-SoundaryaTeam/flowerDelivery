@@ -4,7 +4,6 @@
 
 html[dir="rtl"] {
     direction: rtl;
-    unicode-bidi: embed;
 }
 
 /*=====================================
@@ -13,6 +12,57 @@ html[dir="rtl"] {
 
 html[dir="rtl"] body {
     text-align: right;
+}
+
+/* ============================================
+   BIDI TEXT FIX
+   The content on this site is English (LTR script) even when
+   the layout is switched to RTL demo mode. Setting dir="rtl"
+   on <html> makes the browser apply direction:rtl to every
+   paragraph. For plain English sentences this doesn't reorder
+   the words - but with unicode-bidi:embed (the previous rule
+   here) it does cause trailing punctuation (., ?, !, :) at the
+   very end of a sentence to flip to the visual FRONT instead of
+   staying after the content, e.g.:
+     <p>Same day delivery available?</p>
+   renders as "?Same day delivery available" once dir="rtl" is
+   applied, because the Unicode Bidi Algorithm resolves a
+   trailing neutral character using the paragraph's base
+   direction (RTL) when it sits at the very end of the text.
+
+   Fix: let actual text containers resolve their own bidi
+   paragraph direction from their content (plaintext) so
+   English sentences keep normal left-to-right internal order -
+   and punctuation stays after the content - while everything
+   else (alignment, margins, icon spacing) still mirrors
+   correctly via the rules below.
+   ============================================ */
+html[dir="rtl"] p,
+html[dir="rtl"] div,
+html[dir="rtl"] li,
+html[dir="rtl"] span,
+html[dir="rtl"] a,
+html[dir="rtl"] label,
+html[dir="rtl"] button,
+html[dir="rtl"] .accordion-button,
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6,
+html[dir="rtl"] blockquote,
+html[dir="rtl"] td,
+html[dir="rtl"] th,
+html[dir="rtl"] dd,
+html[dir="rtl"] dt,
+html[dir="rtl"] figcaption,
+html[dir="rtl"] small,
+html[dir="rtl"] strong,
+html[dir="rtl"] em,
+html[dir="rtl"] b,
+html[dir="rtl"] i {
+    unicode-bidi: plaintext;
 }
 
 /*=====================================
@@ -93,6 +143,32 @@ html[dir="rtl"] .pe-3,
 html[dir="rtl"] .pe-4,
 html[dir="rtl"] .pe-5 {
     padding-right: 0 !important;
+}
+
+/* Bootstrap's .list-unstyled only zeroes padding-left (a physical
+   property), not the browser's default padding-inline-start. In
+   RTL that default resolves to padding-right, so every unstyled
+   list on the site (footer nav lists, filter lists, feature lists,
+   etc.) keeps a ~40px indent on the right - misaligning it from the
+   heading or text next to it. Used on nearly every page. */
+html[dir="rtl"] .list-unstyled {
+    padding-right: 0 !important;
+    padding-left: initial;
+}
+
+/* Accordion chevron (e.g. FAQ sections): Bootstrap's
+   .accordion-button::after uses margin-left: auto (a physical
+   property) to push the icon away from the text. That doesn't
+   flip for RTL - in a right-to-left flex row the icon already
+   sits on the physical left, so margin-left:auto just absorbs
+   the empty space that's already at the far-left edge instead of
+   creating a gap between the icon and the text, leaving them
+   jammed together. Swapping to margin-right: auto puts the gap on
+   the correct side (between the icon and the text) and pushes the
+   icon flush to the true left edge, mirroring the LTR spacing. */
+html[dir="rtl"] .accordion-button::after {
+    margin-left: 0;
+    margin-right: auto;
 }
 
 /*=====================================

@@ -104,6 +104,13 @@
             background: var(--color-primary);
         }
 
+        /* Fix: dashboard.css's .auth-btn (60px/18px) was overriding the
+           standard nav auth button size (44px/1rem) used on other pages. */
+        #authContainer .auth-btn {
+            height: 44px;
+            font-size: 1rem;
+        }
+
     </style>
 
 </head>
