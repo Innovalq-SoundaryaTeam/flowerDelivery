@@ -109,20 +109,54 @@ html[dir="rtl"] .me-auto {
     margin-left: auto !important;
 }
 
-html[dir="rtl"] .ms-1,
-html[dir="rtl"] .ms-2,
-html[dir="rtl"] .ms-3,
-html[dir="rtl"] .ms-4,
-html[dir="rtl"] .ms-5 {
+html[dir="rtl"] .ms-1 {
     margin-left: 0 !important;
+    margin-right: .25rem !important;
 }
 
-html[dir="rtl"] .me-1,
-html[dir="rtl"] .me-2,
-html[dir="rtl"] .me-3,
-html[dir="rtl"] .me-4,
+html[dir="rtl"] .ms-2 {
+    margin-left: 0 !important;
+    margin-right: .5rem !important;
+}
+
+html[dir="rtl"] .ms-3 {
+    margin-left: 0 !important;
+    margin-right: 1rem !important;
+}
+
+html[dir="rtl"] .ms-4 {
+    margin-left: 0 !important;
+    margin-right: 1.5rem !important;
+}
+
+html[dir="rtl"] .ms-5 {
+    margin-left: 0 !important;
+    margin-right: 3rem !important;
+}
+
+html[dir="rtl"] .me-1 {
+    margin-right: 0 !important;
+    margin-left: .25rem !important;
+}
+
+html[dir="rtl"] .me-2 {
+    margin-right: 0 !important;
+    margin-left: .5rem !important;
+}
+
+html[dir="rtl"] .me-3 {
+    margin-right: 0 !important;
+    margin-left: 1rem !important;
+}
+
+html[dir="rtl"] .me-4 {
+    margin-right: 0 !important;
+    margin-left: 1.5rem !important;
+}
+
 html[dir="rtl"] .me-5 {
     margin-right: 0 !important;
+    margin-left: 3rem !important;
 }
 
 /*=====================================
@@ -172,6 +206,42 @@ html[dir="rtl"] .accordion-button::after {
 }
 
 /*=====================================
+    LOGO / ICON TOOLBAR ORDER
+=====================================*/
+
+/* Bug: .navbar-brand and the theme/RTL icon-button group are both
+   display:flex, so they inherit direction:rtl from <html> just like
+   any other flex row and mirror their OWN children too. That's on
+   top of the outer navbar/topbar container (also flex) already
+   correctly swapping which SIDE the logo vs. the icon group sit on -
+   which is the mirroring we actually want here.
+   The result was a double mirror: the logo's icon+text order
+   flipped to "FloraDaily [flower]" instead of staying
+   "[flower] FloraDaily", and the Dark Mode / Language buttons swapped
+   places with each other, instead of just moving as a pair to the
+   other side of the bar. Same markup on login.html, register.html,
+   and every other page's main nav, so the bug showed up everywhere.
+   Fix: pin these two elements' own internal direction to ltr so
+   their children keep a fixed reading order, while the parent
+   container is left alone and still mirrors which side each one
+   appears on. */
+html[dir="rtl"] .navbar-brand,
+html[dir="rtl"] .auth-topbar .d-flex.align-items-center.gap-3,
+html[dir="rtl"] .navbar-collapse > .d-flex.align-items-center.gap-3,
+html[dir="rtl"] #authContainer {
+    direction: ltr;
+}
+
+/* Login / Signup topbar: the rest of this page's content (headings,
+   form labels, etc.) stays LTR and does not mirror for RTL, so
+   flipping just the topbar's own side order looked inconsistent.
+   Keep the logo on the left and the Dark Mode / Language icons on
+   the right in both LTR and RTL, matching the rest of the page. */
+html[dir="rtl"] .auth-topbar .container {
+    direction: ltr;
+}
+
+/*=====================================
     ICONS
 =====================================*/
 
@@ -198,8 +268,62 @@ html[dir="rtl"] .footer {
     text-align: right;
 }
 
+/* NOTE: under direction: rtl, the browser flips the flex main-axis
+   itself - "flex-end" no longer means the visual right, it means
+   the visual left (the same mechanism that visually reverses the
+   .row column order below, without any explicit row-reverse rule).
+   Since the footer's columns and text already read right-to-left
+   in this mode, "flex-start" is what actually lands the icons on
+   the visual right, in line with the text above them. */
 html[dir="rtl"] .footer .d-flex {
-    justify-content: flex-end;
+    justify-content: flex-start;
+}
+
+/* Same fix as style.css: the base ".footer i" rule adds
+   margin-right: 8px for the contact icons, but that same rule
+   also hits the icons inside the round social buttons, pushing
+   them off-center within the circle. Reset it here too so the
+   fix holds even when the page is rendered in RTL mode. */
+html[dir="rtl"] .footer .d-flex a i {
+    margin: 0;
+}
+
+/* Home Two hero: the two CTA buttons are plain siblings, and this
+   site neutralizes the browser's automatic bidi reordering
+   elsewhere (see BIDI TEXT FIX above) to protect English
+   punctuation - so these buttons need an explicit flip instead of
+   relying on that. */
+html[dir="rtl"] .hero-cta {
+    flex-direction: row-reverse;
+}
+
+/*=====================================
+    PRICING BILLING TOGGLE
+=====================================*/
+
+/* The Monthly / switch / Yearly group on the pricing page (see
+   .pricing-toggle in style.css) is a plain flex row with no
+   row-reverse rule, so under dir="rtl" the browser's automatic
+   flex main-axis flip (see the FOOTER note above) already puts
+   "Yearly" on the visual left and "Monthly" on the visual right -
+   correct RTL reading order, no fix needed there.
+
+   The switch itself is the actual bug: .pricing-toggle-track is
+   also a flex container, and its only rule for the "on" position
+   is a hard-coded physical translateX(24px) on the thumb. That
+   value doesn't mirror for RTL, so once the outer group flips,
+   the thumb keeps sliding toward the physical right - which is now
+   the "Monthly" side - even while the track fills pink and the
+   Yearly label is the one marked active. The switch ends up
+   pointing at the wrong label.
+
+   Fix: pin the switch's own internal direction to ltr so its
+   flex layout and the translateX(24px) "on" position keep
+   behaving exactly as they do outside RTL mode - thumb on the
+   left when off, sliding right (toward the label that is actually
+   active, per the flipped outer order) when on. */
+html[dir="rtl"] .pricing-toggle-track {
+    direction: ltr;
 }
 
 /*=====================================

@@ -122,6 +122,11 @@ body.dark-mode .bg-light {
     background: var(--color-section) !important;
 }
 
+body.dark-mode .bg-light.text-dark,
+body.dark-mode .badge.bg-light {
+    color: var(--color-text) !important;
+}
+
 body.dark-mode .dashboard-banner {
     background: linear-gradient(135deg, #2a2a2a, #1c1c1c);
     box-shadow: 0 15px 35px rgba(0, 0, 0, .3);

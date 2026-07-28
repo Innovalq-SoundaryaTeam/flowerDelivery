@@ -273,16 +273,27 @@ body {
 body.auth-page {
     padding-top: 0;
 }
-
 .auth-topbar {
     padding: 30px 0;
-    text-align: center;
+}
+
+.auth-topbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .auth-topbar .navbar-brand {
-    display: inline-flex !important;
+    display: flex !important;
     align-items: center;
     gap: 8px;
+    margin: 0;
+}
+
+.auth-topbar .container > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .auth-divider {
@@ -1055,6 +1066,18 @@ body.auth-page {
     justify-content: center;
     border-radius: 50%;
     transition: var(--transition);
+    flex-shrink: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.footer .d-flex a i {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 1;
 }
 
 .footer .d-flex a:hover {
@@ -1094,7 +1117,7 @@ body.auth-page {
         padding: 8px 0;
     }
 
-    #mainNavbar > .d-flex {
+    #mainNavbar>.d-flex {
         flex-wrap: wrap;
         justify-content: flex-start;
         row-gap: 12px;
@@ -1204,7 +1227,7 @@ body.auth-page {
         padding: 8px 0;
     }
 
-    #mainNavbar > .d-flex {
+    #mainNavbar>.d-flex {
         flex-wrap: wrap;
         justify-content: flex-start;
         row-gap: 12px;
@@ -2103,4 +2126,94 @@ body.auth-page {
     color: var(--color-white);
     font-size: 0.8rem;
     font-weight: 600;
+}
+
+/*=====================================
+    PRICING BILLING TOGGLE
+=====================================*/
+
+.pricing-toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+}
+
+.pricing-toggle-input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.pricing-toggle-track {
+    display: flex;
+    align-items: center;
+    width: 54px;
+    height: 30px;
+    padding: 3px;
+    background: #d9d9d9;
+    border: 1px solid #c9c9c9;
+    border-radius: 999px;
+    box-sizing: border-box;
+    transition: var(--transition);
+}
+
+.pricing-toggle-thumb {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    background: var(--color-white);
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+    transition: transform .25s ease;
+}
+
+.pricing-toggle-input:checked~.pricing-toggle-track {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.pricing-toggle-input:checked~.pricing-toggle-track .pricing-toggle-thumb {
+    transform: translateX(24px);
+}
+
+.pricing-toggle-input:focus-visible~.pricing-toggle-track {
+    box-shadow: 0 0 0 3px rgba(233, 30, 140, .3);
+}
+
+body.dark-mode .pricing-toggle-track {
+    background: rgba(255, 255, 255, .12);
+    border-color: rgba(255, 255, 255, .2);
+}
+
+body.dark-mode .pricing-toggle-input:checked~.pricing-toggle-track {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+}
+/* Login/Register Topbar */
+.auth-topbar .container{
+    display:flex !important;
+    justify-content:space-between !important;
+    align-items:center !important;
+}
+
+.auth-topbar .navbar-brand{
+    order:1;
+}
+
+.auth-topbar .d-flex{
+    order:2;
+}
+
+/* RTL */
+html[dir="rtl"] .auth-topbar .navbar-brand{
+    order:2;
+}
+
+html[dir="rtl"] .auth-topbar .d-flex{
+    order:1;
 }
