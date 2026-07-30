@@ -212,6 +212,24 @@ section p {
     background: var(--color-bg);
 }
 
+.navbar>.container {
+    padding-left: 24px;
+    padding-right: 24px;
+    justify-content: flex-start;
+}
+
+@media (min-width: 1200px) {
+    .navbar-collapse {
+        margin-left: 30px;
+        flex-grow: 0;
+    }
+
+    .navbar-nav.mx-auto {
+        margin-left: 0 !important;
+        margin-right: 30px !important;
+    }
+}
+
 .navbar-brand {
     font-family: var(--heading-font);
     font-size: 2rem;
@@ -230,7 +248,7 @@ section p {
 .navbar-nav .nav-link {
     color: var(--color-text);
     font-weight: 500;
-    margin: 0 10px;
+    margin: 0 6px;
     position: relative;
     transition: var(--transition);
 }
@@ -256,10 +274,40 @@ section p {
     width: 100%;
 }
 
+/* Home dropdown: house icon + explicit chevron caret,
+   replacing Bootstrap's faint default triangle so the
+   dropdown is clearly visible/discoverable. */
+
+.home-nav-dropdown.dropdown-toggle::after {
+    display: none;
+}
+
+.home-nav-dropdown {
+    display: inline-flex;
+    align-items: center;
+}
+
+.home-dropdown-caret {
+    font-size: 0.7em;
+    transition: transform 0.25s ease;
+}
+
+.home-nav-dropdown[aria-expanded="true"] .home-dropdown-caret {
+    transform: rotate(180deg);
+}
+
 .theme-toggle {
     width: 45px;
     height: 45px;
     border-radius: 50%;
+}
+
+.rtl-toggle-btn {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    padding: 0.5rem 0.9rem;
+    line-height: 1;
 }
 
 /*=====================================
@@ -273,6 +321,7 @@ body {
 body.auth-page {
     padding-top: 0;
 }
+
 .auth-topbar {
     padding: 30px 0;
 }
@@ -281,6 +330,8 @@ body.auth-page {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .auth-topbar .navbar-brand {
@@ -290,7 +341,7 @@ body.auth-page {
     margin: 0;
 }
 
-.auth-topbar .container > div:last-child {
+.auth-topbar .container>div:last-child {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -489,16 +540,20 @@ body.auth-page {
 
 .auth-btn {
 
-    width: 120px;
-    height: 44px;
+    width: auto;
+    min-width: 88px;
+    height: 36px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
+    padding: 0 16px;
+    white-space: nowrap;
+
     border-radius: 50px;
 
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 600;
 
 }
@@ -1110,6 +1165,7 @@ body.auth-page {
         align-items: flex-start;
         margin: 20px 0;
         padding-left: 4px;
+        padding-right: 4px;
     }
 
     .navbar-nav .nav-link {
@@ -1123,6 +1179,7 @@ body.auth-page {
         row-gap: 12px;
         padding-top: 10px;
         padding-left: 4px;
+        padding-right: 4px;
         border-top: 1px solid rgba(0, 0, 0, .08);
     }
 
@@ -1220,6 +1277,7 @@ body.auth-page {
         align-items: flex-start;
         margin: 20px 0;
         padding-left: 4px;
+        padding-right: 4px;
     }
 
     .navbar-nav .nav-link {
@@ -1233,6 +1291,7 @@ body.auth-page {
         row-gap: 12px;
         padding-top: 10px;
         padding-left: 4px;
+        padding-right: 4px;
         border-top: 1px solid rgba(0, 0, 0, .08);
     }
 
@@ -2194,26 +2253,27 @@ body.dark-mode .pricing-toggle-input:checked~.pricing-toggle-track {
     background: var(--color-primary);
     border-color: var(--color-primary);
 }
+
 /* Login/Register Topbar */
-.auth-topbar .container{
-    display:flex !important;
-    justify-content:space-between !important;
-    align-items:center !important;
+.auth-topbar .container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
 }
 
-.auth-topbar .navbar-brand{
-    order:1;
+.auth-topbar .navbar-brand {
+    order: 1;
 }
 
-.auth-topbar .d-flex{
-    order:2;
+.auth-topbar .d-flex {
+    order: 2;
 }
 
 /* RTL */
-html[dir="rtl"] .auth-topbar .navbar-brand{
-    order:2;
+html[dir="rtl"] .auth-topbar .navbar-brand {
+    order: 2;
 }
 
-html[dir="rtl"] .auth-topbar .d-flex{
-    order:1;
+html[dir="rtl"] .auth-topbar .d-flex {
+    order: 1;
 }

@@ -73,8 +73,8 @@
                     <ul class="navbar-nav mx-auto">
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Home
+                            <a class="nav-link dropdown-toggle home-nav-dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-house me-2"></i>Home<i class="fa-solid fa-chevron-down home-dropdown-caret ms-2"></i>
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="index.html">Home One</a></li>
@@ -128,7 +128,7 @@
 
                     <!-- Right Side -->
 
-                    <div class="d-flex align-items-center gap-3">
+                    <div class="d-flex align-items-center gap-2">
 
                         <!-- Dark Mode -->
 
@@ -140,10 +140,8 @@
 
                         <!-- RTL -->
 
-                        <button id="rtlToggle" class="btn btn-light rounded-circle" aria-label="Toggle RTL">
-
-                            <i class="fa-solid fa-globe"></i>
-
+                        <button id="rtlToggle" class="btn btn-light rounded-pill rtl-toggle-btn" aria-label="Toggle RTL">
+                            <span id="rtlToggleLabel">LTR</span>
                         </button>
 
                         <!-- Cart -->

@@ -50,12 +50,15 @@ if (themeToggle) {
 =====================================*/
 
 const rtlToggle = document.getElementById("rtlToggle");
+const rtlToggleLabel = document.getElementById("rtlToggleLabel");
 
 const savedDirection = localStorage.getItem("direction");
 
 if (savedDirection === "rtl") {
 
     document.documentElement.setAttribute("dir", "rtl");
+
+    if (rtlToggleLabel) rtlToggleLabel.textContent = "RTL";
 
 }
 
@@ -71,11 +74,15 @@ if (rtlToggle) {
 
             localStorage.setItem("direction", "ltr");
 
+            if (rtlToggleLabel) rtlToggleLabel.textContent = "LTR";
+
         } else {
 
             document.documentElement.setAttribute("dir", "rtl");
 
             localStorage.setItem("direction", "rtl");
+
+            if (rtlToggleLabel) rtlToggleLabel.textContent = "RTL";
 
         }
 

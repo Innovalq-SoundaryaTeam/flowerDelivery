@@ -41,6 +41,114 @@
 
     <link rel="stylesheet" href="../assets/css/rtl.css">
 
+    <!-- Page-scoped: keep the whole login screen within the viewport (no page scroll) -->
+    <style>
+        html, body.auth-page {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body.auth-page {
+            display: flex;
+            flex-direction: column;
+        }
+
+        body.auth-page .auth-topbar {
+            padding: 14px 0;
+            flex-shrink: 0;
+        }
+
+        body.auth-page .login-header {
+            padding-top: 0.25rem !important;
+            padding-bottom: 0 !important;
+            flex-shrink: 0;
+        }
+
+        body.auth-page .login-header h1 {
+            font-size: 1.6rem;
+            margin-bottom: 0;
+        }
+
+        body.auth-page .login-header p {
+            margin-top: 6px !important;
+            margin-bottom: 0;
+            font-size: 0.85rem;
+        }
+
+        body.auth-page .login-section {
+            flex: 1 1 auto;
+            display: flex;
+            align-items: center;
+            padding-top: 0.5rem !important;
+            padding-bottom: 0.75rem !important;
+            min-height: 0;
+            overflow: hidden;
+        }
+
+        body.auth-page .login-section .row {
+            width: 100%;
+        }
+
+        body.auth-page .card-body {
+            padding: 1.5rem 2rem !important;
+        }
+
+        body.auth-page .card-body .text-center.mb-4 {
+            margin-bottom: 0.75rem !important;
+        }
+
+        body.auth-page .card-body h3 {
+            font-size: 1.3rem;
+        }
+
+        body.auth-page .card-body .mb-3 {
+            margin-bottom: 0.6rem !important;
+        }
+
+        body.auth-page .card-body .mb-4 {
+            margin-bottom: 0.6rem !important;
+        }
+
+        body.auth-page .form-label {
+            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
+        }
+
+        body.auth-page .form-control {
+            padding-top: 0.45rem;
+            padding-bottom: 0.45rem;
+        }
+
+        body.auth-page #createAccountLink {
+            margin-top: 0.6rem !important;
+            font-size: 0.9rem;
+        }
+
+        body.auth-page .auth-divider {
+            margin: 0.6rem 0 !important;
+        }
+
+        body.auth-page .social-btn {
+            padding-top: 0.4rem;
+            padding-bottom: 0.4rem;
+        }
+
+        /* Extra compaction on short viewports (laptops, small screens) */
+        @media (max-height: 700px) {
+            body.auth-page .login-header p {
+                display: none;
+            }
+
+            body.auth-page .card-body h3 + p {
+                display: none;
+            }
+
+            body.auth-page .card-body {
+                padding: 1.1rem 2rem !important;
+            }
+        }
+    </style>
+
 </head>
 
 <body class="auth-page">
@@ -58,7 +166,7 @@
                     class="logo-text">FloraDaily</span>
             </a>
 
-            <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center gap-2">
 
                 <!-- Dark Mode -->
 
@@ -70,10 +178,8 @@
 
                 <!-- RTL -->
 
-                <button id="rtlToggle" class="btn btn-light rounded-circle" aria-label="Toggle RTL">
-
-                    <i class="fa-solid fa-globe"></i>
-
+                <button id="rtlToggle" class="btn btn-light rounded-pill rtl-toggle-btn" aria-label="Toggle RTL">
+                            <span id="rtlToggleLabel">LTR</span>
                 </button>
 
             </div>
