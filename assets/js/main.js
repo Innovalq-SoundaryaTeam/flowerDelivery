@@ -1531,7 +1531,7 @@ if (document.getElementById("serviceTitle")) {
 
         document.getElementById("servicePricing").innerHTML =
             service.pricing.map(function (p) {
-                const cardClass = p.featured ? "card border-0 shadow pricing-card featured" : "card border-0 shadow-sm h-100 pricing-card";
+                const cardClass = p.featured ? "card border-0 shadow h-100 pricing-card featured" : "card border-0 shadow-sm h-100 pricing-card";
 
                 const badgeHtml = p.featured ? '<span class="pricing-badge">Most Popular</span>' : "";
 

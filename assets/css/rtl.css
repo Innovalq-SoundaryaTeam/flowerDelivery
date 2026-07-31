@@ -95,6 +95,58 @@ html[dir="rtl"] .text-end {
     text-align: left !important;
 }
 
+/* Bootstrap's responsive variants (text-sm-start, text-lg-start, etc.)
+   are separate classes from the base .text-start/.text-end, so they
+   need their own RTL overrides too - otherwise elements using them
+   (like the "Back to Blog" button, which uses text-lg-start) stay
+   pinned to the LTR side even when the page is in RTL mode. */
+html[dir="rtl"] .text-sm-start,
+html[dir="rtl"] .text-md-start,
+html[dir="rtl"] .text-lg-start,
+html[dir="rtl"] .text-xl-start,
+html[dir="rtl"] .text-xxl-start {
+    text-align: right !important;
+}
+
+html[dir="rtl"] .text-sm-end,
+html[dir="rtl"] .text-md-end,
+html[dir="rtl"] .text-lg-end,
+html[dir="rtl"] .text-xl-end,
+html[dir="rtl"] .text-xxl-end {
+    text-align: left !important;
+}
+
+/*=====================================
+    INPUT GROUPS (password eye toggle)
+=====================================*/
+
+/* This project loads plain bootstrap.min.css rather than the RTL
+   build, so .input-group's corner-rounding and border-overlap rules
+   are hardcoded to physical left/right, assuming LTR order. In RTL
+   the flex order visually flips (the eye-toggle button lands on the
+   left of the password field instead of the right), but it keeps
+   its LTR-side rounded corner and its margin-left overlap - so it
+   ends up square on the wrong corner with a stray gap/double border
+   next to the input. Mirror both the radii and the overlap margin
+   so the input and button still read as one seamless control. */
+html[dir="rtl"] .input-group>.form-control:not(:last-child),
+html[dir="rtl"] .input-group>.form-select:not(:last-child) {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: var(--bs-border-radius) !important;
+    border-bottom-right-radius: var(--bs-border-radius) !important;
+}
+
+html[dir="rtl"] .input-group>.form-control:not(:first-child),
+html[dir="rtl"] .input-group>.btn:not(:first-child) {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-left-radius: var(--bs-border-radius) !important;
+    border-bottom-left-radius: var(--bs-border-radius) !important;
+    margin-left: 0 !important;
+    margin-right: -1px !important;
+}
+
 /*=====================================
     MARGIN
 =====================================*/
@@ -227,7 +279,7 @@ html[dir="rtl"] .accordion-button::after {
    appears on. */
 html[dir="rtl"] .navbar-brand,
 html[dir="rtl"] .auth-topbar .d-flex.align-items-center.gap-3,
-html[dir="rtl"] .navbar-collapse > .d-flex.align-items-center.gap-3,
+html[dir="rtl"] .navbar-collapse>.d-flex.align-items-center.gap-3,
 html[dir="rtl"] #authContainer {
     direction: ltr;
 }

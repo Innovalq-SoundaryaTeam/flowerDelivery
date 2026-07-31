@@ -218,6 +218,20 @@ section p {
     justify-content: flex-start;
 }
 
+/* Below the navbar-expand-xl breakpoint, the brand wraps onto its
+   own line (it's wider than the leftover space next to the auth
+   buttons + toggler), leaving #authContainer and .navbar-toggler as
+   the only two items on the second line. With justify-content still
+   set to flex-start, those two get stuck touching each other on the
+   left with the rest of the row empty. Space them apart instead so
+   Login/Sign Up sit on the left and the hamburger icon sits on the
+   right, using the row's full width. */
+@media (max-width: 1199.98px) {
+    .navbar>.container {
+        justify-content: space-between;
+    }
+}
+
 @media (min-width: 1200px) {
     .navbar-collapse {
         margin-left: 30px;
@@ -414,21 +428,31 @@ body.auth-page {
     padding: 40px 30px;
     text-align: center;
     position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 
+}
+
+/* Card height alone isn't enough - if one card has more/less content
+   above the button (e.g. the featured tier's badge, or an extra
+   feature line), the button itself can still land on a different
+   line. Pinning it to the bottom of the flex column keeps every
+   card's button on the same baseline regardless of content length. */
+.pricing-card>.btn {
+    margin-top: auto;
 }
 
 .pricing-card.featured {
 
     background: var(--color-primary);
     color: var(--color-white);
-    transform: scale(1.05);
-    transform-origin: top center;
 
 }
 
 .pricing-card.featured:hover {
 
-    transform: scale(1.05) translateY(-8px);
+    transform: translateY(-8px);
 
 }
 
@@ -1126,6 +1150,15 @@ body.auth-page {
     line-height: 1;
 }
 
+/* !important here is deliberate and scoped only to these footer
+   social icons: `.footer i` (further up this file) sets icon color
+   to var(--color-primary) with normal specificity, and something in
+   the cascade keeps re-asserting that pink on these icons even when
+   a higher-specificity :hover rule targets them - the visible symptom
+   is the icon vanishing into the pink hover background. Pinning the
+   color to white here, in both default and hover states, guarantees
+   the icon is always readable regardless of what else touches
+   .footer i in the future. */
 .footer .d-flex a i {
     margin: 0;
     display: flex;
@@ -1133,12 +1166,17 @@ body.auth-page {
     justify-content: center;
     font-size: 16px;
     line-height: 1;
+    color: var(--color-white) !important;
 }
 
 .footer .d-flex a:hover {
     background: var(--color-primary);
     color: var(--color-white);
     transform: translateY(-3px);
+}
+
+.footer .d-flex a:hover i {
+    color: var(--color-white) !important;
 }
 
 .footer hr {
