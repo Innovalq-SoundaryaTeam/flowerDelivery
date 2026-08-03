@@ -50,16 +50,21 @@
                     <img src="../assets/images/logo-icon.svg" alt="FloraDaily logo" class="brand-logo-icon"><span class="logo-text">FloraDaily</span>
                 </a>
 
-                <div id="authContainer" class="d-flex align-items-center gap-2">
+                <div id="navQuickToggles" class="d-flex align-items-center gap-2">
 
-                    <a href="login.html" class="btn btn-outline-primary auth-btn">
-                        Login
-                    </a>
+                        <!-- Dark Mode -->
 
-                    <a href="register.html" class="btn btn-primary auth-btn">
-                        Sign Up
-                    </a>
+<button id="themeToggle" class="btn btn-light rounded-circle" aria-label="Dark Mode">
 
+                            <i class="fa-solid fa-moon"></i>
+
+                        </button>
+
+                        <!-- RTL -->
+
+                        <button id="rtlToggle" class="btn btn-light rounded-pill rtl-toggle-btn" aria-label="Toggle RTL">
+                            <span id="rtlToggleLabel">LTR</span>
+                        </button>
                 </div>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
@@ -113,19 +118,18 @@
                     </ul>
                     <div class="d-flex align-items-center gap-2">
 
-                        <!-- Dark Mode -->
+                <div id="authContainer" class="d-flex align-items-center gap-2">
 
-<button id="themeToggle" class="btn btn-light rounded-circle" aria-label="Dark Mode">
+                    <a href="login.html" class="btn btn-outline-primary auth-btn">
+                        Login
+                    </a>
 
-                            <i class="fa-solid fa-moon"></i>
+                    <a href="register.html" class="btn btn-primary auth-btn">
+                        Sign Up
+                    </a>
 
-                        </button>
+                </div>
 
-                        <!-- RTL -->
-
-                        <button id="rtlToggle" class="btn btn-light rounded-pill rtl-toggle-btn" aria-label="Toggle RTL">
-                            <span id="rtlToggleLabel">LTR</span>
-                        </button>
 
                         <!-- Cart -->
 

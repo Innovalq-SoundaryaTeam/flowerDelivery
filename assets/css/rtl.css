@@ -280,7 +280,8 @@ html[dir="rtl"] .accordion-button::after {
 html[dir="rtl"] .navbar-brand,
 html[dir="rtl"] .auth-topbar .d-flex.align-items-center.gap-3,
 html[dir="rtl"] .navbar-collapse>.d-flex.align-items-center.gap-3,
-html[dir="rtl"] #authContainer {
+html[dir="rtl"] #authContainer,
+html[dir="rtl"] #navQuickToggles {
     direction: ltr;
 }
 

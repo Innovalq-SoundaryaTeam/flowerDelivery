@@ -1230,12 +1230,17 @@ body.auth-page {
 }
 
 /*=====================================
-    PERSISTENT AUTH (always visible, outside hamburger)
+    PERSISTENT QUICK TOGGLES (dark mode + LTR/RTL,
+    always visible, outside hamburger). Login/Sign Up
+    now live inside the hamburger menu (#mainNavbar)
+    instead, so the top row stays a single line on
+    mobile: brand on one side, these two icon-sized
+    toggles + the hamburger on the other.
 =====================================*/
 
-#authContainer {
+#navQuickToggles {
     order: 2;
-    gap: 14px !important;
+    gap: 10px !important;
 }
 
 .navbar-toggler {
@@ -1251,7 +1256,7 @@ body.auth-page {
 }
 
 @media (min-width: 1200px) {
-    #authContainer {
+    #navQuickToggles {
         order: 5;
         margin-left: 24px;
     }
