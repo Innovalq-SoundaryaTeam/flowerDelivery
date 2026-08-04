@@ -1262,6 +1262,46 @@ body.auth-page {
     }
 }
 
+/* Narrow phones (~360-400px): brand + quick toggles + hamburger no
+   longer fit on one line at full size, so the hamburger wraps to its
+   own row on the left instead of staying top-right. Shrink each
+   piece just enough to keep everything on a single row. */
+@media (max-width: 400px) {
+    .navbar > .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .navbar-brand {
+        font-size: 1.4rem;
+        gap: 6px;
+    }
+
+    .brand-logo-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    #navQuickToggles {
+        gap: 6px !important;
+    }
+
+    #navQuickToggles #themeToggle {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+    }
+
+    .rtl-toggle-btn {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.7rem;
+    }
+
+    .navbar-toggler {
+        padding: 4px 8px;
+    }
+}
+
 @media (max-width: 767.98px) {
     #authContainer {
         gap: 8px !important;
